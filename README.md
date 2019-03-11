@@ -17,8 +17,6 @@
 ### Single Page Applications:
 * Angular
 
-### UI:
-
 ### Server Side:
 * Node.js
 * Express
