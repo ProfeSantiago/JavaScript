@@ -6,7 +6,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-    <!-- <div id="DivClase"></div> -->
+    <div id="DivClase"></div>
     
     <script type="text/babel">
 
@@ -29,7 +29,8 @@
                 const datosPersona = this.state.person.map((item, i) => (
                     <div>
                     <h3>Nombre: { item.name.first }, Apellido: { item.name.last } </h3>
-                    <span>Telefono: { item.cell }, email: { item.email }, Ciudad: { item.location.city }</span>
+                    <h5>Telefono: { item.cell }, email: { item.email },</h5>
+                    <span>Ciudad: { item.location.city }</span>
                     </div>
                 ));
 

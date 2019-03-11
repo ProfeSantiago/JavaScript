@@ -10,10 +10,10 @@
     
     <script type="text/babel">
 
-        class ClasePaises extends React.Component {
+        class ClaseLibros extends React.Component {
             constructor(props) {
                 super(props);
-                this.state = {pais: []};
+                this.state = {Libros: []};
             }
 
             componentDidMount() {
@@ -21,26 +21,26 @@
             }
 
             Carga_Ajax() {
-                $.getJSON('https://restcountries.eu/rest/v2/all')
-                .then(({ results }) => this.setState({ pais: results }));
+                $.getJSON('https://hn.algolia.com/api/v1/search?query=')
+                .then(({ hits }) => this.setState({ Libros: hits }));
             }
 
             render() {
-                const datosPais = this.state.pais.map((item, i) => (
+                const datosLibros = this.state.Libros.map((item, i) => (
                 <div>
-                   <h3>Nombre: { item[1].name } Apellido: { item[1].capital } </h3>
+                   <h5>Titulo: { item.title } Autor: { item.author } </h5>
                 </div>
                 ));
 
                 return (
                 <div>
-                    <div className="panel-list">{ datosPais }</div>
+                    <div className="panel-list">{ datosLibros }</div>
                 </div>
                 );
             }
         }
 
-        ReactDOM.render(<ClasePaises />, document.getElementById('DivClase'));
+        ReactDOM.render(<ClaseLibros />, document.getElementById('DivClase'));
     </script>
 </body>
 </html>
