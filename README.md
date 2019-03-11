@@ -20,3 +20,10 @@
 ### Server Side:
 * Node.js
 * Express
+
+### Tools:
+* Grunt
+* Gulp
+* NPM
+* Bower
+* WebPack
