@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="angular.min.js"></script>
+
+<script>
+
+		var modulo = angular.module("miModulo", []);
+
+		modulo.controller("miController", function($scope) {
+			$scope.elValor = "Hola Controllers de Angular.js";
+		});
+</script>
+</head>
+<body>
+	<div ng-app="miModulo" ng-controller="miController">
+		{{ elValor }}
+	</div>
+	
+	<p>Nota: Estamos usando un módulo en este ejemplo (miModulo).<br>
+	   Un módulo es un contenedor para las partes de una aplicación.<br>
+	   Todo controlador debería pertenecer a un módulo.<br>
+	   Un Controller es un objeto de JavaScript.
+	</p>
+</body>
+</html>

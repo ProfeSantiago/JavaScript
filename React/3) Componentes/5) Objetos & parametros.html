@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+<script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="DivUsuario"></div>
+    
+    <script type="text/babel">
+       
+       function devuelveFecha(date) {
+            return date.toLocaleDateString();
+        }
+
+        function Comment(props) {
+            return (
+                <div>
+                    <div>
+                        <img
+                            src={props.pardatos.foto}
+                            alt={props.pardatos.nombre}
+                        />
+                        <div>{props.pardatos.nombre}</div>
+                    </div>
+                    <div>{props.parpuesto}</div>
+                    <div>{devuelveFecha(props.parfecha)}</div>
+                </div>
+            );
+        }
+
+        const miObjeto = {
+            fecha: new Date(),
+            puesto: 'Agente FBI',
+            datos: {
+                nombre: 'Dana Scully',
+                foto: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gillian-anderson-dana-scully-1533814298.jpg?crop=0.75xw:1xh;center,top&resize=100:*',
+            },
+        };
+
+        ReactDOM.render(
+            <Comment
+                parfecha={miObjeto.fecha}
+                parpuesto={miObjeto.puesto}
+                pardatos={miObjeto.datos}
+            />,
+        document.getElementById('DivUsuario'));
+
+    </script>
+</body>
+</html>

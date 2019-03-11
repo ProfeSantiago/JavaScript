@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	
+</head>
+<body>
+	<h3 id="H3Clonado">1er Ejemplo de Formato, (Click para Clonar...)</h3>
+	
+	<link   type="text/css" rel="stylesheet" href="Estilos/MisEstilos.css"/>
+	<script type="text/javascript" src="Scripts/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="MisLibrerias/ObjetosLib.js"></script>
+	<script type="text/javascript" src="MisLibrerias/TextosLib.js"></script>
+	<script>
+		var x=$(document);
+		x.ready(inicializarEventos); //Se ejecuta al cargar la pagina.
+		
+		function inicializarEventos() {		
+			AccionClick('#H3Clonado', Clonador); //Le agrega al evento click de un elemento una funcion
+		}// Fin inicializarEventos	
+	</script>
+</body>
+
+</html>
+

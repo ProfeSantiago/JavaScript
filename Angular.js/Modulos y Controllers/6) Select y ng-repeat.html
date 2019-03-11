@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+	<h3>Ejemplo de Select con Controller</h3>
+	<div ng-app="MiModulo" ng-controller="MiController">
+		
+		<p>Seleccione una nave de Star Trek:</p>
+
+		<select ng-model="naveSeleccionada" ng-options="x.nombre for x in naves">
+		</select>
+
+		<h3>Seleccionaste la Nave: {{naveSeleccionada.nombre}}</h3>
+		<p>Con Matricula: {{naveSeleccionada.matricula}}</p>
+		
+	</div>
+	
+	<script>
+	var app = angular.module('MiModulo', []);
+		app.controller('MiController', function($scope) {
+			$scope.naves = [
+				{nombre : "Enterprise", matricula : "Ncc-1701E"},
+				{nombre : "Voyager", matricula : "Ncc-7465"},
+				{nombre : "Defiant", matricula : "Nx-74205"}
+			];
+		});
+	</script>
+</body>
+</html>

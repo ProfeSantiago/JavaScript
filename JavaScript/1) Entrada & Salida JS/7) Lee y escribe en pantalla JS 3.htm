@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>hola mundo javascript</title>
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />  -->
+	<meta charset="UTF-8">
+	
+	<script language=javascript runat=client>
+
+		function Saluda() {		
+		var TextoAgregado = document.getElementById('agregaTxt').value;
+		
+			var TextoCompleto = 
+			         document.getElementById("Parrafito").innerHTML;
+					 
+			document.getElementById("Parrafito").innerHTML = 
+			                 TextoCompleto + '<br>' + TextoAgregado;
+		}
+		
+
+	</script>
+	
+</head>
+
+<body>
+	<h3>Digite algun texto a agregar:</h3>
+	
+	<input name="agregaTxt" type="text" id="agregaTxt" /> 
+	
+	<input type="button" value="Agregar >>"  onclick="Saluda();"> <br><br>
+
+	<p id="Parrafito">Este es un parrafo al que se le va a agregar texto dinámicamente.</p>
+</body>
+</html>
+

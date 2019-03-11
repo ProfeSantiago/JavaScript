@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Eventos del Mouse</title>
+	<style>
+	.miBloque {
+		float: left;
+		margin: 5px;
+		padding: 15px;
+		width: 250px;
+		height: 250px;
+		border: 1px solid black;
+		} 
+	</style>
+	<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+	<script>
+		$(document).ready(function(){			
+			$("#elDiv").hover(function(){
+				$("#parrafo_Accion").html('El mouse Entro :)');
+			},function(){
+				$("#parrafo_Accion").html('El mouse Salio :(');
+			});
+		}); 
+	</script>
+	
+</head>
+<body>
+	<div class="miBloque">	
+		<p>Mueva el mouse sobre el bloque de la derecha >></p>
+		<p id="parrafo_Accion"></p>
+	</div>	
+	
+	<div id="elDiv" class="miBloque">
+		
+	</div>
+	
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="Scripts/jquery-2.1.3.min.js"></script>
+	<script src="Scripts/jquery-ui-1.11.4/jquery-ui.min.js"></script>	
+	<link rel="stylesheet" href="Scripts/jquery-ui-1.11.4/jquery-ui.css">
+	
+	<script type="text/javascript">
+		$(function() {
+			$( "input[type=submit],a, button" ).button()
+		  
+		  .click(function( event ) {
+			event.preventDefault();
+		  });
+		});
+	</script>
+</head>
+
+<body>
+	<input type="button" value="Boton Corriente HTML"> <br><br>
+	
+	<button>Boton Corriente</button> <br><br>
+ 
+	<input type="submit" value="Un boton submit"> <br><br>
+	 
+	<a href="#">Un link</a>
+</body>
+</html>
+

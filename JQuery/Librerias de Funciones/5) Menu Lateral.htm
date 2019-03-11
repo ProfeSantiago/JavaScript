@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link   type="text/css" rel="stylesheet" href="Estilos/MisEstilos.css"/>
+	<script type="text/javascript" src="Scripts/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="MisLibrerias/ObjetosLib.js"></script>
+	<script type="text/javascript" src="MisLibrerias/TextosLib.js"></script>
+	<script type="text/javascript">
+	<!--
+		$(document).ready(function(){
+			HideElement('dd');  
+			
+			PonePunteroManita('#Clonador'); //Le pone el puntero de manita al elemento
+			
+			$('dt').mouseenter(EntraMouse);
+			
+			$("#miTexto").click(function () {
+				toggleBarra('BarraLateral', 'BloqueContenido', 'miTexto');
+			});  //Llama la funcion Toggle en el link					
+		}); 
+		
+		function EntraMouse() {
+			$(this).next().show().siblings('dd').hide();
+			//$(this).next().show().siblings('dd').slideUp(300);
+			//$(this).next().slideDown(200).siblings('dd').slideUp(200);
+		}
+
+		function toggleBarra(showHideDiv, reSizeDiv, switchTextDiv) {
+			var hideDive = document.getElementById(showHideDiv);
+			var sizeDive = document.getElementById(reSizeDiv);
+			var text = document.getElementById(switchTextDiv);
+
+			if (hideDive.style.display == "block") {
+				hideDive.style.display = "none";
+				text.innerHTML = ">>";
+				sizeDive.style.width = "100%";
+			} else {
+				hideDive.style.display = "block";
+				text.innerHTML = "<<";
+				sizeDive.style.width = "74.5%";
+			} //End else
+		} //End function 
+
+
+	//-->
+	</script>
+	
+</head>
+<body>
+	<div class="Contenedor">
+	<div class="izquierda" id="BarraLateral" style="display: block;">
+        <dl>
+            <dt>Asp</dt>
+                <dd>Activer Sever Pages</dd>
+            <dt>JSP</dt>
+                <dd>Java Server Pages</dd>
+            <dt>PHP</dt>
+                <dd>Personal Home Page / Hypertext Preprocessor</dd>
+            <dt>CGI</dt>
+                <dd>Common Gateway Interfase</dd>
+            <dt>Servlet</dt>
+                <dd>a Java Class used to extend the capabilities of a server</dd>
+        </dl>
+	</div>
+    <div class="derecha" id="BloqueContenido">
+		<h3> <a id="miTexto" href="#"> << </a> Muestra / oculta menú lateral</H3>	
+
+	</div>
+	<div class="clear"></div>
+</div>
+
+
+</body>
+</html>
+

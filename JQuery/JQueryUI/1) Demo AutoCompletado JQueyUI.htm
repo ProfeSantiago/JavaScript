@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Auto Completado JQueyUI</title>
+	<script src="Scripts/jquery-2.1.3.min.js"></script>
+	<script src="Scripts/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="Scripts/jquery-ui-1.11.4/jquery-ui.css">
+	
+	<script type="text/javascript">
+		$(function() {
+		var Lenguajes = [
+		  "ASP.Net",
+		  "C#",
+		  "Java",
+		  "JavaScript",
+		  "JSP",
+		  "MVC",
+		  "Node.JS",
+		  "PHP",
+		  "Python",
+		  "Ruby",
+		  "VB.Net"
+		];
+		$( "#nombreTxt" ).autocomplete({
+		  source: Lenguajes
+		});
+	  });
+	</script>
+	
+</head>
+
+<body>
+	<div class="ui-widget">
+		<label for="nombreTxt">Digite parte del nombre de un Lenguaje o tecnologia: </label><br>
+		<input type="text" id="nombreTxt" /> <br><br>
+	</div>
+</body>
+</html>
+

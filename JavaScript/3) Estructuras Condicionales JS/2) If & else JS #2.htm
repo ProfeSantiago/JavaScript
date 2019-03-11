@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script language=javascript>
+	<!--
+		function comprobar()
+		{
+			if (document.form1.checkbox3.checked == true)
+			{
+			if (document.form1.checkbox1.checked == true & document.form1.checkbox2.checked == false )
+			{	alert('falta el requisito #2')
+			}
+			if (document.form1.checkbox2.checked == true & document.form1.checkbox1.checked == false )
+			{	alert('falta el requisito #1')
+			}
+				
+			if (document.form1.checkbox1.checked == true & document.form1.checkbox2.checked == true)
+			{
+				alert('si puede matricular el curso!')
+			}else{
+				alert('no puede matricularlo!')
+			}
+			}	
+		}
+	
+	//-->
+	</script>
+
+</head>
+<body>
+
+
+ejemplo de matricula con javascript:
+
+<hr></hr> 
+
+<form action="" method=post id=form1 name=form1>
+
+	<input id=checkbox1 type=checkbox name=checkbox1> requisito 1<br><br>
+
+	<input id=checkbox2 type=checkbox name=checkbox2 >requisito 2<br><br>
+
+	<hr></hr>
+
+	<input id=checkbox3 type=checkbox name=checkbox3 onclick="comprobar()"> curso deseado<br>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="DivClase"></div>
+    
+    <script type="text/babel">
+
+        class ClasePaises extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {pais: []};
+            }
+
+            componentDidMount() {
+                this.Carga_Ajax();
+            }
+
+            Carga_Ajax() {
+                $.getJSON('https://restcountries.eu/rest/v2/all')
+                .then(({ results }) => this.setState({ pais: results }));
+            }
+
+            render() {
+                const datosPais = this.state.pais.map((item, i) => (
+                <div>
+                   <h3>Nombre: { item[1].name } Apellido: { item[1].capital } </h3>
+                </div>
+                ));
+
+                return (
+                <div>
+                    <div className="panel-list">{ datosPais }</div>
+                </div>
+                );
+            }
+        }
+
+        ReactDOM.render(<ClasePaises />, document.getElementById('DivClase'));
+    </script>
+</body>
+</html>

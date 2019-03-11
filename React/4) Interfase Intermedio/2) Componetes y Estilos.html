@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+<script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<style>
+    .square {
+        background: #fff;
+        border: 1px solid #000;
+        float: left;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 34px;
+        height: 34px;
+        margin-right: -1px;
+        margin-top: -1px;
+        padding: 0;
+        text-align: center;
+        width: 34px;
+    }
+</style>
+</head>
+<body>
+    <div id="DivBujo"></div>
+    
+    <script type="text/babel">
+
+        class Cuadradito extends React.Component {
+            render() {
+                return (
+                    <button className="square">
+                        {this.props.valor}
+                    </button>
+                );
+            }
+        }//------------------------------------------
+
+        class Lienzo extends React.Component {
+            DibujaCuadritos(i) {
+                return <Cuadradito valor={i} />;
+            }
+
+            render() {
+                const status = 'Presione el siguiente Boton:';
+                return (
+                <div>
+                    <p>{status}</p>
+                    <div>
+                        {this.DibujaCuadritos(1)}
+                        {this.DibujaCuadritos(2)}
+                        {this.DibujaCuadritos(3)}
+                    </div>
+                </div>
+                );
+            }
+        }//------------------------------------------
+        
+        ReactDOM.render(
+            <Lienzo />,
+            document.getElementById('DivBujo')
+        );
+
+    </script>
+</body>
+</html>

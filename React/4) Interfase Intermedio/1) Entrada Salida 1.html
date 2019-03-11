@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+<script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="DivFormulario"></div>
+    
+    <script type="text/babel">
+    
+        class ClaseHolaUsuario extends React.Component {
+            constructor(propiedades) {
+                super(propiedades)
+
+                this.state = {
+                    usuario: 'Tony Stark'
+                }
+
+                this.CambiaTexto = this.CambiaTexto.bind(this)
+            }
+
+            CambiaTexto (e) {
+                this.setState({
+                    usuario: e.target.value
+                })
+            }
+
+            render() {
+                return (
+                <div> 
+                    Digite su nombre: &nbsp;
+                    <input
+                    type="text"
+                    value={this.state.usuario}
+                    onChange={this.CambiaTexto}
+                    />
+                    <br /><br />
+
+                    Bienvenido {this.state.usuario} !!
+                </div>
+                )
+            }
+
+        }//Fin ClaseHolaUsuario
+        
+        ReactDOM.render(<ClaseHolaUsuario />, document.getElementById('DivFormulario'));
+    </script>
+</body>
+</html>

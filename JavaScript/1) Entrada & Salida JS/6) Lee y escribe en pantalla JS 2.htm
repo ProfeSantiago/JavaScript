@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hola mundo javascript</title>
+	
+	<script>
+	function Saluda(){
+		var nombre = document.getElementById('nombreTxt').value;
+		
+		var elMensaje = "Hola " + nombre + " Bienvenido";	
+		
+		document.getElementById('mensajeTxt').value = elMensaje;
+	}		
+	</script>
+	
+</head>
+
+<body>
+	Digite su nombre: <br>
+	
+	<input type="text" id="nombreTxt" /> <br>
+	
+	<input type="button" value="Saludar"  onclick="Saluda();"> <br><br>
+	
+	Mensaje de bienvenida:<br>
+	<input type="text" id="mensajeTxt" />
+</body>
+</html>
+

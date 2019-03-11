@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+<script language=javascript runat=client>
+	<!--
+		var TextoJSON = '{ "DesarrolloWeb" : [' +
+							'{ "Tecnología":"PHP    " , "Lenguaje":"PHP" },' +
+							'{ "Tecnología":"Node.JS" , "Lenguaje":"JavaScript" } ]}';
+		//----------------------------------------------		
+		var ObjetoJSON = JSON.parse(TextoJSON);		
+		//----------------------------------------------
+		document.write("<table border=1><tr><th>Tecnología</th><th>Lenguaje</th></tr>");
+		for (i=0; i < ObjetoJSON.DesarrolloWeb.length; i++)
+		{ 
+		  document.write("<tr><td>");
+		  document.write(ObjetoJSON.DesarrolloWeb[i].Tecnología);
+		  document.write("</td><td>");
+		  document.write(ObjetoJSON.DesarrolloWeb[i].Lenguaje);
+		  document.write("</td></tr>");
+		}
+		document.write("</table>");		
+	//-->
+	</script>	
+	
+</body>
+</html>
+

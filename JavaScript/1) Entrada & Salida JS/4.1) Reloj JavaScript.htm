@@ -1,0 +1,62 @@
+<!--     'Santiago Rodríguez Paniagua. 12/01/2003	 'santiago@costarricense.cr-->
+<!DOCTYPE html>
+<html>
+<head>	
+	<style>
+		.styling{
+			background-color:"#b0c4de";
+			color:black;
+			font: bold 24px MS Sans Serif;
+			padding: 0px;
+		}
+	</style>	
+</head>
+
+<body bgcolor="#b0c4de" scroll=no>
+		<span id="digitalclock" class="styling"></span>
+		<script>
+		<!--
+			var alternate=0
+			var standardbrowser=!document.all&&!document.getElementById
+			if (standardbrowser)
+				document.write('<form name="tick"><input type="text" name="tock" size="12"></form>')
+			function show(){
+				if (!standardbrowser)
+				var clockobj=document.getElementById? document.getElementById("digitalclock") : document.all.digitalclock
+				var Digital= new Date()
+				var Dia    = Digital.getDate();
+				var Mes    = Digital.getMonth()+1;
+				var Ano    = Digital.getFullYear();
+				var hours  = Digital.getHours()
+				var minutes= Digital.getMinutes()
+				var dn="am"
+				if (hours==12) dn="pm" 
+				if (hours>12){
+					dn="pm"
+					hours=hours-12
+				}			
+				if (hours==0) hours=12
+				if (hours.toString().length==1)
+				hours="0"+hours
+				if (minutes<=9)
+				minutes="0"+minutes			
+				if (standardbrowser){
+					if (alternate==0)
+					document.tick.tock.value=hours+" : "+minutes+" "+dn
+					else
+						document.tick.tock.value=hours+"   "+minutes+" "+dn
+				}
+				else{
+					if (alternate==0)
+					clockobj.innerHTML=Dia+"/"+Mes+"/"+Ano+", "+hours+"<font color='black'>:</font>"+minutes+" "+"<sup style='font-size:1px'>"+dn+"</sup>"
+					else
+						clockobj.innerHTML=Dia+"/"+Mes+"/"+Ano+", "+hours+"<font color='#b0c4de'>:</font>"+minutes+" "+"<sup style='font-size:1px'>"+dn+"</sup>"
+				}			
+				alternate=(alternate==0)? 1 : 0
+				setTimeout("show()",1000)
+		}
+		window.onload=show
+		//-->
+		</script>
+</body>
+</html>

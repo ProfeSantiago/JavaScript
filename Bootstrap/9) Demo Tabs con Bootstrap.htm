@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <meta charset="UTF-8"> -->
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Nota: JQuery es requerido para Bootstrap -->
+	<link rel="stylesheet" href="Scripts/bootstrap-3.3.4-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="Scripts/jquery-2.1.3.min.js"></script>
+	<script src="Scripts/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+	
+	<script language=javascript runat=client>
+	
+		$('#myTabs a').click(function (e) {
+		  e.preventDefault()
+		  $(this).tab('show')
+		})
+	
+	</script>	
+</head>
+<body>
+<div class="container">
+  <h3>Ejemplo de Tabs con Bootstrap</h3>
+
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+		<a href="#html5" aria-controls="html5" role="tab" data-toggle="tab">HTML5</a>
+	</li>
+    <li role="presentation">
+		<a href="#css3" aria-controls="css3" role="tab" data-toggle="tab">CSS3</a>
+	</li>
+    <li role="presentation">
+		<a href="#javascript" aria-controls="javascript" role="tab" data-toggle="tab">JavaScript</a>
+	</li>
+  </ul>
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="html5"><br>HTML5 es la base de toda aplicacion web o mobile</div>
+    <div role="tabpanel" class="tab-pane" id="css3"><br>Sin CSS3 la apariencia de HTML5 seria muy diferente y no tan agradable</div>
+    <div role="tabpanel" class="tab-pane" id="javascript"><br>JavaScript es quien le pone la accion a las paginas</div>
+  </div>
+	
+</div>	
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link   type="text/css" rel="stylesheet" href="Estilos/MisEstilos.css"/>
+	<script type="text/javascript" src="Scripts/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="MisLibrerias/ObjetosLib.js"></script>
+	<script type="text/javascript" src="MisLibrerias/TextosLib.js"></script>
+	<script type="text/javascript">
+	<!--
+		var Contador = 1;	
+		
+		function CambiaImagen() {
+		
+			CambiaImgAhorcado("#ImgAhorcado", Contador); //Llama a función de la librería		
+			
+			if (Contador <6){
+				Contador++;
+			}else {
+				Contador = 0;
+			}
+		} //------------------------------------------------------------------------
+	//-->
+	</script>
+	
+</head>
+<body>
+	 <img id="ImgAhorcado"  src="Imagenes/Ahorcado0.gif" alt="Ahorcado">
+	 <br>
+	 <button id="CambiaImgBtn" type="button" onclick="CambiaImagen()">Cambiar Imagen</button>
+</body>
+</html>
+

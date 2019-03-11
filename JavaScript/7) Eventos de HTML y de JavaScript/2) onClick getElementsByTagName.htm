@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <script type="text/javascript">
+
+    	function darClick(){
+			var elparrafo = document.getElementsByTagName('p')[1];
+			elparrafo.addEventListener('click', muestraMensaje);
+		}
+
+		function muestraMensaje(){
+			alert('Me diste click!');
+		}
+
+		addEventListener('load', darClick);
+		/*Se agruega la función darClick al load de la página.
+		  para que sea reconocida y activada.
+		*/
+    </script>
+</head>
+
+<body>
+	<p> 
+		Este ejemplo es muy similar al anterior, solo que en lugar de que el evento onclick <br>
+		sea llamado de manera "Inline" es llamado de manera "Embedded" o Interna o Incrustada.<br><br>
+		
+		Pero una de las mayores novedades aquí es que no se hace referencia a la etiqueta "p".<br>
+		por medio de "getElementById" si no que por medio de "getElementsByTagName.<br><br>
+		
+		Otra cosa importantisima es que se le esta agregando "acción" a una etiqueta. <br>
+		Es decir se le esta agreguando dinámicamente el evento "click" al párrafo.
+	</p><br>
+	<p> Puede darle click a este parrafo</p>
+</body>
+</html>
+

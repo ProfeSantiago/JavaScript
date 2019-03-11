@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link href="Hoja_Estilos.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<script language=javascript >
+
+	TextoXML="<DesarrolloWeb>";
+	TextoXML=TextoXML+"<Tecnología>";
+	TextoXML=TextoXML+"<Nombre>ASP.Net</Nombre>";
+	TextoXML=TextoXML+"<Lenguaje>VB.Net / C#</Lenguaje>";
+	TextoXML=TextoXML+"</Tecnología>";
+	TextoXML=TextoXML+"<Tecnología>";
+	TextoXML=TextoXML+"<Nombre>JSP</Nombre>";
+	TextoXML=TextoXML+"<Lenguaje>Java</Lenguaje>";
+	TextoXML=TextoXML+"</Tecnología>";
+	TextoXML=TextoXML+"</DesarrolloWeb>";
+	//----------------------------------------------
+	if (window.DOMParser)
+	{
+	  parser=new DOMParser();
+	  ObjetoXML=parser.parseFromString(TextoXML,"text/xml");
+	} else {
+	  ObjetoXML=new ActiveXObject("Microsoft.XMLDOM");
+	  ObjetoXML.async=false;
+	  ObjetoXML.loadXML(TextoXML);
+	}
+	//----------------------------------------------
+	document.write("<table border=1><tr><th>Tecnología</th><th>Lenguaje</th></tr>");
+	var EtiquetaXML=ObjetoXML.getElementsByTagName("Tecnología");
+	for (i=0;i<EtiquetaXML.length;i++)
+	{ 
+	  document.write("<tr><td>");
+	  document.write(EtiquetaXML[i].getElementsByTagName("Nombre")[0].childNodes[0].nodeValue);
+	  document.write("</td><td>");
+	  document.write(EtiquetaXML[i].getElementsByTagName("Lenguaje")[0].childNodes[0].nodeValue);
+	  document.write("</td></tr>");
+	}
+	document.write("</table>");		
+
+</script>	
+	
+</body>
+</html>
+

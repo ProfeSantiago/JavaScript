@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script language=javascript runat=client>
+	<!--
+    	function darClick(){
+			var elparrafo = document.querySelector("#principal p:first-child");
+			//Nota: Para seleccionar un elemento especuse estos : nth-child(2) 
+			//Para seleccionar el 'ultimo use: last-child
+			elparrafo.addEventListener('click', muestraMensaje);
+		}
+		
+		function muestraMensaje(){
+			alert('Le dio click al primer parrafo');
+		}
+		
+		addEventListener('load', darClick);
+		/*Se agruega la función darClick al load de la página.
+		  para que sea reconocida y activada.
+		*/
+	//-->
+	</script>
+</head>
+
+<body>
+	<section id="principal">
+	<p>Primer párrafo (dele click a este)</p><br>
+	<p>Segundo párrafo</p><br>
+	<p>Tercer párrafo</p><br>
+	<p>Cuarto párrafo</p><br>
+	</section>
+</body>
+</html>
+

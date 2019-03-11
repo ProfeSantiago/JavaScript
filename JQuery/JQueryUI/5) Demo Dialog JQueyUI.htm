@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="Scripts/jquery-2.1.3.min.js"></script>
+	<script src="Scripts/jquery-ui-1.11.4/jquery-ui.min.js"></script>	
+	<link rel="stylesheet" href="Scripts/jquery-ui-1.11.4/jquery-ui.css">
+	
+	<script type="text/javascript">
+	
+		function MensajeJQueryUI() {
+			$( "#dialog" ).dialog();
+		}
+		
+		function MensajeJS() {
+			alert("Este es un ejemplo de ventana emergente\nal estilo JavaScript");
+		}
+	</script>
+</head>
+
+<body>
+	Precione los siguientes botones: <br>
+	
+	<input type="button" value="Mensaje JS"  onclick="MensajeJS();"> <br><br>
+	
+	<input type="button" value="Mensaje JQueryUI"  onclick="MensajeJQueryUI();"> <br><br>
+
+
+	<div id="dialog" title="Mensaje JQueryIU" style = "display:none">
+	  <p>Este es un ejemplo de ventana emergente al estilo JQueryIU.</p>
+	</div>
+</body>
+</html>
+

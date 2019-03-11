@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+	<h3>Lista de Frameworks del curso</h3>
+	<div ng-app="" ng-init="frameworks=['Ember', 'Vue.js' ,'React','Bootstrap','Angular.js']">
+		
+		<select>
+			<option ng-repeat="f in frameworks">{{f}}
+			</option>				
+		</select>
+		
+	</div>
+</body>
+</html>

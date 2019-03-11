@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selectores y acceso al DOM</title>
+	<style>
+
+	.miBloque {
+		float: left;
+		margin: 5px;
+		padding: 15px;
+		width: 250px;
+		height: 450px;
+		border: 1px solid black;
+		} 
+
+	</style>
+	<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+		
+			$("#Selec_Id").click(function(){
+				$("#SoloElCuarto").css("background-color","yellow");
+			});
+
+			$("#Selec_Clas").click(function(){
+				$(".laClase").css("background-color","red");
+			});
+			
+			$("#Selec_tipo").click(function(){
+				$("p").css("background-color","lightblue");
+			});
+			
+			$("#SelectNodo_Btn").click(function(){
+			
+				var cualNodo = document.getElementById('txt_nodo').value
+				
+				//Pinta de rosado el parrafo dentro del "elDiv"
+				//que tenga el indice de nodo leído de pantalla				
+				$("#elDiv p").eq(cualNodo).css("background-color","pink");					
+			}); 
+
+			
+		}); 
+		
+
+	</script>
+	
+</head>
+<body>
+	<div class="miBloque">	
+		<h3>Accediento a un elemento por su ID (#)</h3>
+		<button id="Selec_Id">Selec. Id</button>
+		
+		<h3>Accediento a un elemento por su Clase (.)</h3>
+		<button id="Selec_Clas">Selec. Clase</button>
+		
+		<h3>Accediento a un elemento por su tipo</h3>
+		<button id="Selec_tipo">Selec. Tipo</button>		
+		
+		<h3>Navegacion por nodos </h3>
+		
+		Selecciona el nodo:<br>
+		<input type="text" id="txt_nodo"/>
+		<button id="SelectNodo_Btn" >Selecciona</button>
+	</div>	
+	
+	<div id="elDiv" class="miBloque">
+		<p class="laClase">Primer párrafo</p><br>
+		<p>Segundo párrafo</p><br>
+		<p class="laClase">Tercer párrafo</p><br>
+		<p id="SoloElCuarto">Cuarto párrafo</p><br>
+	</div>
+
+</body>
+</html>
+

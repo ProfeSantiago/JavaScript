@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link   type="text/css" rel="stylesheet" href="Estilos/MisEstilos.css"/>
+	<script type="text/javascript" src="Scripts/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="MisLibrerias/ObjetosLib.js"></script>
+	<script type="text/javascript" src="MisLibrerias/TextosLib.js"></script>
+	<script>
+		$(document).ready(function(){
+		
+			HideElement('div.Contenido');
+			
+			AccionClick('#MiBoton', ShowNextElement); //Le agrega al evento click de un elemento una funcion			
+			
+			$("#AgrandaBtn").click(function () {
+				AgrandaTexto('#contDiv');
+			});
+
+			$("#AchicaBtn").click(function () {
+				AchicaTexto('#contDiv');
+			});
+		});
+	</script>
+	
+</head>
+<body>
+	<button id="MiBoton"> Muestra Texto </button>
+
+	<div id="contDiv" class="Contenido"> 
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
+		Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br>
+		when an unknown printer took a galley of type and scrambled it to make a type <br>
+		specimen book.
+	</div>
+	<br>
+	<button id="AgrandaBtn"> Agranda Texto </button>
+	<button id="AchicaBtn"> Achica Texto </button>
+
+</body>
+</html>
+

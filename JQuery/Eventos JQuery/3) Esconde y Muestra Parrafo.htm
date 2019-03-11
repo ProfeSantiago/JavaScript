@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pruebas JQuery</title>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+	
+		$(document).ready(function(){
+			$("#Toggle_Hide_Btn").click(function(){
+				$("p.Clase_Hide").toggle(1000);
+				//Esconde todos los elementos "P" o pararrafos que tengan 
+				//una clase llamada: "Clase_Hide" y tarda 1000 milisegundos en desaparecerlo
+			});
+		}); 
+	
+	</script>
+	
+</head>
+<body>
+
+<p class="Clase_Hide">
+	Este párrafo se esconderá y luego mostrará de nuevo,<br>
+	cuando se presione el botón, porque tiene una clase llamada: "Clase_Hide"
+</p>
+
+<button id="Toggle_Hide_Btn">Esconder / Ocultar</button>
+<br><br>
+
+<p>
+	Nota: observe que en este ejemplo la librería o Framework JQuery,<br>
+	es llamado de manera diferente...
+</p>
+	
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="elModulo" ng-controller="elController"> 
+	<h2>Ejemplo de Web Service que Muestra Ubicación</h2>
+	<h3>Llamado con el servicio $http de AngularJS</h3>
+	
+	<table border=1>
+		<tr><th>Latitud</th></tr>
+		<tr>
+			<td>{{laLati}}</td>
+		</tr>
+		<tr><th>Longitud</th></tr>
+		<tr>
+			<td>{{laLongi}}</td>
+		</tr>
+	</table>
+</div>
+
+<script>
+	var app = angular.module('elModulo', []);	
+	app.controller('elController', function($scope, $http) {
+		
+		$http({
+			method : "GET",
+			url : "http://ip-api.com/json"
+		}).then(function mySuccess(response) {
+		
+			var elTextoJson = JSON.stringify(response.data);
+			var elObjetoJson = JSON.parse(elTextoJson);			
+			$scope.laLati = elObjetoJson.lat;
+			$scope.laLongi = elObjetoJson.lon;
+			
+		}, function myError(response) {
+			$scope.laLati = 0;
+			$scope.laLongi = 0;
+		});
+		
+	});	
+</script>	
+</body>
+</html>
+

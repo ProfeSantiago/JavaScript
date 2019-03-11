@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+<!-- ----------------------------------------------------------------------- -->
+<div ng-app="">
+	<h2>Ejemplo Angular.js</h2>
+ 	<p>Digite su Nombre: <input type="text" ng-model="Nombre"></p>
+ 	<p>{{Nombre}}</p>
+	
+	<p>Nota: La directiva ng-model, es como una "fuente de Datos".<br>
+	Hace un vínculo con el valor de un control HTML.
+	</p>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<div>
+	<h2>Ejemplo JQuery</h2>
+ 	<p>Digite su Nombre: <input type="text" id="elTextBox"></p>
+	<script type="text/javascript">
+		$('#elTextBox').on('keyup', function(){
+			$('#Parrafo').html($('#elTextBox').val());
+		});
+	</script>
+ 	<p id="Parrafo">	</p>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+</body>
+</html>

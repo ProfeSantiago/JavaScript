@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+	<script type="text/javascript" src="Scripts/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="MisLibrerias/ObjetosLib.js"></script>
+	<script type="text/javascript" src="MisLibrerias/TextosLib.js"></script>
+	<script type="text/javascript" src="MisLibrerias/DatosLib.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+	<!--
+		var TextoJSON = '{ "DesarrolloWeb" : [' +
+							'{ "Tecnología":"PHP    " , "Lenguaje":"PHP" },' +
+							'{ "Tecnología":"Node.JS" , "Lenguaje":"JavaScript" } ]}';
+		//----------------------------------------------	
+
+		var ObjetoJSON = AnalizadorJSON(TextoJSON); //Función de la librería
+		
+		document.write("<table border=1><tr><th>Tecnología</th><th>Lenguaje</th></tr>");
+		for (i=0; i < ObjetoJSON.DesarrolloWeb.length; i++)
+		{ 
+		  document.write("<tr><td>");
+		  document.write(ObjetoJSON.DesarrolloWeb[i].Tecnología);
+		  document.write("</td><td>");
+		  document.write(ObjetoJSON.DesarrolloWeb[i].Lenguaje);
+		  document.write("</td></tr>");
+		}
+		document.write("</table>");		
+		
+	//-->
+	</script>	
+</body>
+</html>
+

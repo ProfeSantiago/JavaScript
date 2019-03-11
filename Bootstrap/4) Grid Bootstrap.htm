@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="Scripts/bootstrap-3.3.4-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="Scripts/jquery-2.1.3.min.js"></script>
+	<script src="Scripts/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+	
+	<h3> Ejemplo de Grids de Bootstrap </h3>
+	
+	<script language=javascript runat=client>
+	<!--
+		var TextoJSON = '{ "DesarrolloWeb" : [' +
+						'{ "Tecnología":"PHP    " , "Lenguaje":"PHP" },' +
+						'{ "Tecnología":"Node.JS" , "Lenguaje":"JavaScript" } ]}';
+		//----------------------------------------------		
+		var ObjetoJSON = JSON.parse(TextoJSON);		
+		//----------------------------------------------
+		
+		for (i=0; i < ObjetoJSON.DesarrolloWeb.length; i++)
+		{ 
+		  document.write('<div class="row">');
+		  
+		  document.write('<div class="col-sm-2" style="background-color:lavender;">');
+		  document.write(ObjetoJSON.DesarrolloWeb[i].Tecnología +'</div>');
+		  document.write('<div class="col-sm-2" style="background-color:lavenderblush;">');
+		  document.write(ObjetoJSON.DesarrolloWeb[i].Lenguaje +'</div>');
+		  
+		  document.write("</div>");
+		}
+	
+	//-->
+	</script>	
+	
+	<br><br><p>Nota: Cambie el tamaño a la página</p>
+	
+	</div>
+	
+ 
+</body>
+</html>
+

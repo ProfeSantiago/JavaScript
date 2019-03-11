@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	 
+		.Parrafo_Verde{
+		   font-size:12pt;
+		   color: green;
+		   font-family:verdana;
+		}
+
+		.Parrafo_Marcado_Amarillo{
+			background-color: yellow;
+			font: bold 12pt 'Times Roman';
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+	 
+	 </style>
+
+	<script type="text/javascript">
+
+		function CambiaClase()
+		{			
+			document.getElementById("elParrafo").className = "Parrafo_Verde";
+		}
+		
+		function CambiaClase2()
+		{			
+			document .getElementById("elParrafo").className = "Parrafo_Marcado_Amarillo";
+		}
+
+	</script>
+</head>
+
+<body>
+
+<h3>Cambia Clase CSS del parrafo con JS</h3>
+
+<p id="elParrafo">
+	Este parrafo va a cambiar de Clase CSS <br>
+	programacionalmente con JavaScript.<br>
+</p>
+
+<button onclick="CambiaClase()">Texto Verde</button> 
+<button onclick="CambiaClase2()">Resalte Amarillo</button>
+
+</body>
+</html>

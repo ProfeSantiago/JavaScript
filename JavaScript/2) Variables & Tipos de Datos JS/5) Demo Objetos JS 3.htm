@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<script language=javascript runat=client>
+	<!--
+		document.write ("Definicion de objetos utilizando notacion literal <br> Por medio de un objeto mas generico <br>");
+		document.write ("<hr> <br>");
+		
+		var crearPersona = function(elNombre, elApellido){
+			return{
+				nombre : elNombre,
+				apellido : elApellido,
+				saluda : function(){
+					return "Hola soy: " + this.nombre + " " + this.apellido;
+				}//fin saluda
+			};//fin return
+		};//fin crearPersona
+	
+     	var batman = crearPersona("Bruce","Wayne");
+		var robin3 = crearPersona("Tim","Drake");
+			
+		document.write (">> Llamando al objeto batman: " + batman.saluda() + "<br><br>");
+		document.write (">> Llamando al objeto robin #3: " + robin3.saluda() + "<br><br>");
+    //-->	
+	</script>
+	
+</head>
+
+<body>
+	
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+		
+	function llamada_Api_Ajax() {
+		var miXhttp = new XMLHttpRequest(); 
+
+		miXhttp.onreadystatechange = function() {
+			if (miXhttp.readyState == 4 && miXhttp.status == 200) {
+				ImprTablaJson(miXhttp.responseText);
+			}//Fin if
+		}//Fin function
+		
+		miXhttp.open("GET", "http://jsonip.com", true);
+		miXhttp.send();
+	}//Fin llamada_Api_Ajax ==============================
+	
+	function ImprTablaJson(TextoJSON) {
+		var ObjetoJSON = JSON.parse(TextoJSON);	
+		
+		document.write("<h2>Web Service que obtiene la IP</h2>");
+		document.write("<h3>Llamado con JavaScript Puro</h3>");
+		document.write("<table border=1><tr><th>IP</th></tr>");
+		document.write("<tr><td>");
+		document.write(ObjetoJSON.ip);
+		document.write("</td></tr>");
+		document.write("</table>");
+	}//Fin ImprTablaJson ================================================
+			
+	llamada_Api_Ajax();
+
+</script>	
+</body>
+</html>
+

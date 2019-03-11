@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html> 
+<head></head> 
+	<script language=javascript runat=client>
+
+	function Selecciona() {
+		var elCombo = document.getElementById("miCombo");
+		var elValor = elCombo.options[elCombo.selectedIndex].value;
+		var elTexto = elCombo.options[elCombo.selectedIndex].text;
+		alert("Valor seleccionado es: " +elValor+"\nTexto seleccionado: " +elTexto);
+	}
+
+	</script>
+<body>	 
+
+	<form>
+		<select id="miCombo">
+		  <option value="1">C#</option>
+		  <option value="2">Java</option>
+		  <option value="3">JavaScript</option>
+		  <option value="4">PHP</option>
+		</select>
+	</form>	
+	<br>
+	<button onclick="Selecciona()">Muestra Seleccionado</button>
+</body> 
+</html> 

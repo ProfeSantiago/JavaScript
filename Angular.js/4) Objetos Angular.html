@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+	<div ng-app="" ng-init="framework={lenguaje:'JavaScript',tipo:'web', nombre: 'Angular.js'}">
+	
+		<p>El framework que estudiamos es para el lenguaje:
+		{{ framework.lenguaje }}</p>
+		
+		<p>y es de tipo: <span ng-bind="framework.tipo"></span></p>
+		
+		<p>y se llama: <span ng-bind="framework.nombre"></span></p>
+	</div>
+</body>
+</html>

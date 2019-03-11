@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link   type="text/css" rel="stylesheet" href="Estilos/MisEstilos.css"/>
+	<script type="text/javascript" src="Scripts/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="MisLibrerias/ObjetosLib.js"></script>
+	<script type="text/javascript" src="MisLibrerias/TextosLib.js"></script>
+	<script type="text/javascript">
+	<!--
+		$(document).ready(function(){
+			AgregaClaseLista(1, 'roja'); //Le asigna una clase css al primer elemento de la lista.
+			CambiaColorLista(2, 'blue'); //Le cambia el formato al segundo elemento de la lista.
+
+			$("#BotonCambia").click(function () {
+				CambiaTextoLista(3, 'Modificado con JQuery')
+			});//Cambia el texto de la lista
+			
+			$("#BotonFormato").click(function () {
+				RemueveClaseLista(1, 'roja');
+				CambiaColorLista(3, 'green');
+			}); //Cambia el formato de de la lista			
+		}); 
+	//-->
+	</script>
+	
+</head>
+<body>
+	<ul>
+		<li>primera</li>
+		<li>Segunda</li>
+		<li>Tercera</li>
+	</ul>
+
+	<button id="BotonCambia">Cambiar Lista</button>
+	<button id="BotonFormato">Cambiar Formato</button>
+</body>
+</html>
+

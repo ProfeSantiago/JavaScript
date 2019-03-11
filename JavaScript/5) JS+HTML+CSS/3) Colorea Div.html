@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#Cuadrado {
+		  width: 120px;
+		  height: 120px;
+		  border: 2px inset gray;
+		  margin-bottom: 1em;
+		}
+
+		button {
+		  padding: .5em 2em;
+		}	
+	 </style>
+
+	<script type="text/javascript">
+		function CambiaFondo()
+		{			
+			miCuadrado = document.getElementById("Cuadrado");
+			
+			if (miCuadrado.style.backgroundColor == "rgb(255, 170, 68)")
+			{
+				miCuadrado.style.backgroundColor = "transparent";
+			}else
+			{
+				miCuadrado.style.backgroundColor = "#ffaa44";			
+			}
+		}
+	</script>
+
+</head>
+
+<body>
+
+<h3>Cambia color de fondo del Div</h3>
+
+<div id="Cuadrado">
+</div>
+
+<button onclick="CambiaFondo()">Cambiar Color</button>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+<div ng-app="elModulo" ng-controller="elController"> 
+	<h2>Ejemplo de Web Api de Paises</h2>
+	<h3>Llamado con el servicio $http de AngularJS</h3>
+	
+	<table border=1>
+		<tr><th>País</th><th>Capital</th></tr>
+		<tr ng-repeat="pais in losDatos">
+			<td>{{pais.name}}</td>
+			<td>{{pais.capital}}</td>
+		</tr>
+	</table>
+		
+</div>
+
+<script>
+	var app = angular.module('elModulo', []);
+	
+	app.controller('elController', function($scope, $http) {
+		$http.get("https://restcountries.eu/rest/v1/all")
+		.then(function(response) {
+			$scope.losDatos = response.data;
+		});
+	});
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pruebas JQuery</title>
+	
+	<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+	
+    <script type="text/javascript">
+
+		$(document).ready(function(){
+			$("#Desvanece_Btn").click(function(){
+				$(".Clase_Desvanece").fadeTo("slow",0.05);
+		    });
+		}); 
+
+	</script>
+	
+</head>
+<body>
+
+<p>
+	El siguiente Div se va a desvanecer cuando se presione el botón.
+</p>
+
+<br><br>
+
+<div  class="Clase_Desvanece" style="background:lightgreen;width:300px;height:300px">
+	<button id="Desvanece_Btn">Desvanecer</button>
+</div>
+	
+</body>
+</html>
+

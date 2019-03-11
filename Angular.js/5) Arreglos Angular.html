@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+	<div ng-app="" ng-init="frameworks=['JQuery','Bootstrap','Angular.js']">
+	
+		<p>El framework que estamos estudiando es:
+		{{ frameworks[2] }}</p>
+		
+		<p>y antes pasamos por: <span ng-bind="frameworks[0]"></span></p>
+				
+	</div>
+</body>
+</html>

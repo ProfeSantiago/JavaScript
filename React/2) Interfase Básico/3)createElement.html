@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <div id="DivPrincipal"></div>
+
+    <script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        const laLista =
+        React.createElement('div', {},
+            React.createElement('h2', {}, 'Sabores del Mes'),
+            React.createElement('ul', {},
+            [
+                React.createElement('li', {}, 'Jocote-Fresa'),
+                React.createElement('li', {}, 'Vanilla-Mamon Chino'),
+                React.createElement('li', {}, 'Banano-Carne Molida')
+            ]
+            )
+        );
+
+        ReactDOM.render(
+            laLista,
+            document.getElementById('DivPrincipal')
+        );
+    </script>
+</body>
+</html>

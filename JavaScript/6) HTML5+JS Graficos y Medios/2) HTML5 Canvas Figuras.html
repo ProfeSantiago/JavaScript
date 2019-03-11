@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<script type="text/javascript">
+				
+	function DibujaRectangulo(iniX, iniY, finX, finY)
+	{
+		//Creamos una instancia del Canvas
+		var miCamvas = document.getElementById("elCanvas");
+
+		//Obtenemos los métodos y propiedeades del canvas
+		var contx = miCamvas.getContext("2d");
+		
+
+	}
+	
+	function DibujaCirculo(iniX, iniY, finX, finY)
+	{
+		//Creamos una instancia del Canvas
+		var miCamvas = document.getElementById("elCanvas");
+
+		//Obtenemos los métodos y propiedeades del canvas
+		var contx = miCamvas.getContext("2d");
+		
+		contx.beginPath();
+		contx.arc(iniX,iniY,finX,finY,2*Math.PI);
+		contx.stroke();  //Dibuja
+	}
+
+
+
+</script>
+<body>
+
+	<canvas id="elCanvas" width="400" height="400" style="border:1px solid #d3d3d3;"></canvas>
+	
+	<p>
+	<input type="button" value="Rectangulo" onclick="DibujaRectangulo(100,150,220,200)">
+	
+	<input type="button" value="Circulo" onclick="DibujaCirculo(95,50,40,0)">
+	</p>
+</body>
+</html>

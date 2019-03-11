@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module("miModulo", []);
+
+		app.directive("show", function() {
+			return {
+				link: function(scope, element, attributes) {
+					scope.$watch(attributes.show, function(value){
+					element.css('display', value ? '' : 'none');
+				});
+				}
+			};
+		});
+
+	</script>
+</head>
+<body ng-app="miModulo">
+	<label for="checkbox">
+		<input id="checkbox" type="checkbox" ng-model="esVisible">Muestra / Oculta
+	</label>
+	<div show="esVisible">
+		<p>Hola Angular.js</p>
+	</div>
+	
+	<p>Nota: Estamos usando un módulo en este ejemplo (miModulo).<br>
+	   Un módulo es un contenedor para las partes de una aplicación.
+	</p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pruebas JQuery</title>
+	
+	<style type="text/css"> 
+		div.panel,p.flip{
+			margin:0px;
+			padding:5px;
+			text-align:center;
+			background:#e5eecc;
+			border:solid 1px #c3c3c3;
+		}
+		div.panel{
+			height:120px;
+			display:none;
+		}
+	</style>
+	
+	<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+    <script type="text/javascript">
+	
+		$(document).ready(function(){
+			$(".flip").click(function(){
+				$(".panel").slideToggle("slow");
+			});
+		}); 
+	
+	</script>
+	
+</head>
+<body>
+<div class="panel">
+<p>Estos dos parrafos se muestran y ocultan por medio de JQUERY.</p>
+<p>Esto podría ser usado como un menú desplegable.</p>
+</div>
+ 
+<p class="flip">Muestra / Oculta Panel</p>
+
+	
+</body>
+</html>
+

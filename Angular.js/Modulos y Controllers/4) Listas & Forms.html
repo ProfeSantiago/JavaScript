@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="miModulo">
+<head>
+<script type="text/javascript" src="angular.min.js"></script>
+<script>
+      var miModulo = angular.module('miModulo', []);
+	  
+      miModulo.controller('miController', function ($scope){
+        $scope.nombres = ['Hugo', 'Paco', 'Luis'];
+
+        $scope.agregaNombre = function() {
+          $scope.nombres.push($scope.nuevoNombre);
+		  $scope.nuevoNombre = '';
+        };
+		
+      });
+</script>
+</head>
+<body ng-controller="miController">
+  
+    <ul>
+      <li ng-repeat="name in nombres">{{name}}</li>
+    </ul>
+	
+    <form ng-submit="agregaNombre()">
+      <input type="text" ng-model="nuevoNombre">
+      <input type="submit" value="agregar">
+    </form>
+  </body>
+</html>

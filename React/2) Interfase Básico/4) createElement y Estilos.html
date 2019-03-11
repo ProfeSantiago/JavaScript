@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+<script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<style>
+    .botonCuadrado {
+        background: #fff;
+        border: 1px solid #000;
+        float: left;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 34px;
+        height: 34px;
+        margin-right: -1px;
+        margin-top: -1px;
+        padding: 0;
+        text-align: center;
+        width: 34px;
+    }
+</style>
+</head>
+<body>
+    <div id="DivPrincipal"></div>
+    
+    <script type="text/babel">
+        
+        const botoncillo = 
+        React.createElement('button', {className: "botonCuadrado"}, 'X');
+
+        ReactDOM.render(    
+            botoncillo,
+            document.getElementById('DivPrincipal')
+        );
+
+    </script>
+</body>
+</html>

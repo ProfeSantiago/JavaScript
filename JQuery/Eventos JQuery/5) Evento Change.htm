@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pruebas JQuery</title>
+	
+	<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#miCombo").change(function(){
+				$("#parrafo_Accion").html('El combo ahora tiene este valor: ' + $(this).val());
+			});			
+		}); 
+	</script>
+	
+</head>
+<body>
+
+	<select id="miCombo">
+	  <option value="ASP.Net">ASP.Net</option>
+	  <option value="PHP">PHP</option>
+	  <option value="JSP">JSP</option>
+	  <option value="Node.js">Node.js</option>
+	</select>
+	
+	<p id="parrafo_Accion"></p>
+	
+</body>
+</html>
+

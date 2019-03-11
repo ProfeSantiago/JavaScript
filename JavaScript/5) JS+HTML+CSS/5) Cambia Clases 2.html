@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	 
+		.Parrafo_Gris{
+			background-color: #C0C0C0;
+			font-family: "Arial Black";
+			font-size: 14pt;
+		}
+
+		.Parrafo_Amarillo{
+			background-color: yellow;
+			font-family: 'Comic Sans MS';
+			font-size: 12pt;
+			text-align: left;
+			border: medium solid blue
+		}
+
+	 
+	 </style>
+
+	<script type="text/javascript">
+
+		function CambiaClase()
+		{			
+			var laClase = document.getElementById("elParrafo").className;
+			if (laClase == "Parrafo_Gris")
+			{			
+				document.getElementById("elParrafo").className = "Parrafo_Amarillo";
+			}else{
+				document.getElementById("elParrafo").className = "Parrafo_Gris";
+			}
+		}
+
+	</script>
+</head>
+
+<body>
+
+<h3>Cambia Clase CSS del parrafo con JS</h3>
+
+<p id="elParrafo">
+	Este parrafo va a cambiar de Clase CSS <br>
+	programacionalmente con JavaScript.<br>
+</p>
+
+<button onclick="CambiaClase()">Cambia de Estilo</button> 
+
+
+</body>
+</html>

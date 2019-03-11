@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body >
+	<div ng-app="elModulo" ng-controller="elController"> 
+		
+		<select> 
+			<option ng-repeat="pais in losDatos" 
+					value="{{pais.callingCodes}}">{{pais.name}}</option>
+		</select>
+	</div>	
+
+	<script>
+	var app = angular.module('elModulo', []);
+	
+	app.controller('elController', function($scope, $http) {
+		$http.get("https://restcountries.eu/rest/v1/all")
+		.then(function(response) {
+			$scope.losDatos = response.data;
+		});
+	});
+	</script>
+</body>
+</html>
+

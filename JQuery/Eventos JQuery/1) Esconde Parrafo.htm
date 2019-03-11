@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pruebas JQuery</title>
+	
+	<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+    <script>
+		$(document).ready(function(){
+
+			$("#Hide_Btn").click(function(){
+				$("p.Clase_Hide").hide(2000);
+				//Nota los parentesis pueden ir vacios
+				//Esconde todos los elementos "P" o parrafos que tengan
+				//una clase llamada: "Clase_Hide" y tarda 1000 milisegundos en desaparecerlo
+			});
+
+		});
+    </script>
+	
+</head>
+<body>
+
+<p class="Clase_Hide">
+	Este párrafo se esconderá cuando se presione el botón,<br> 
+	porque tiene una clase llamada: "Clase_Hide"
+</p>
+
+<button id="Hide_Btn">Esconder</button>
+	
+</body>
+</html>
+

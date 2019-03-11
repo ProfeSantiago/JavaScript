@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<style>
+    .miBloque {
+        float: left;
+        margin: 10px;
+        padding: 15px;
+        width: 200px;
+        height: 250px;
+        border: 1px solid black;
+    } 
+</style>
+</head>
+<body>
+    <div id="DivBujo"></div>
+    
+    <script type="text/babel">
+
+        function Componente(props) {
+            return (
+                <div class="miBloque">
+                    
+                    <img
+                        src={props.parfoto}
+                        alt={props.parnombre}
+                    />
+                    <p>
+                    {props.parnombre}
+                    </p>
+                </div>
+            );
+        }//------------------------------------------
+
+        class Lienzo extends React.Component {
+            DibujaComponentes() {
+                return <Componente parnombre={'Dana Scully'}
+                                   parfoto={'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gillian-anderson-dana-scully-1533814298.jpg?crop=0.75xw:1xh;center,top&resize=100:*'}
+                        />;
+            }
+
+            render() {
+                return (
+                <div>
+                    <div>
+                        {this.DibujaComponentes()}
+                        {this.DibujaComponentes()}
+                        {this.DibujaComponentes()}
+                    </div>
+                </div>
+                );
+            }
+        }//------------------------------------------
+        
+        ReactDOM.render(
+            <Lienzo />,
+            document.getElementById('DivBujo')
+        );
+
+    </script>
+</body>
+</html>

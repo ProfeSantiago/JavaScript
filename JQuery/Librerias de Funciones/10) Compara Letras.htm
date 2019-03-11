@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link   type="text/css" rel="stylesheet" href="Estilos/MisEstilos.css"/>
+	<script type="text/javascript" src="Scripts/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="MisLibrerias/ObjetosLib.js"></script>
+	<script type="text/javascript" src="MisLibrerias/TextosLib.js"></script>
+	<script type="text/javascript">
+	<!--
+		function BuscaLetras(){
+		
+			var PalabraLeida = document.getElementById("letraText").value
+			var LetraLeida = PalabraLeida.substring(0, 1);
+			
+			var PalabraGuardada = 'JQuery';
+			var LetraGuardada = PalabraGuardada.substring(0, 1);
+			
+			if(LetraLeida.charAt(0) === LetraGuardada.charAt(0)) {
+				alert('Adivinaste la letra');
+			}else{
+				alert('Perdiste');
+			}				
+		}
+	//-->
+	</script>
+	
+</head>
+<body>
+	<h3>Compara letras de pantalla con la primera letra de un string </h3>
+	<input type="text" id="letraText">
+	<button id="BotonCompara" onclick="BuscaLetras()">Comparar</button>
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="Scripts/bootstrap-3.3.4-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="Scripts/jquery-2.1.3.min.js"></script>
+	<script src="Scripts/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+<h2> Tabla con estilo rallado </h2>
+
+<script language=javascript runat=client>
+	<!--
+		TextoXML="<DesarrolloWeb>";
+		TextoXML=TextoXML+"<Tecnología>"+"<Nombre>ASP.Net</Nombre>";
+		TextoXML=TextoXML+"<Lenguaje>VB.Net / C#</Lenguaje>"+"</Tecnología>";
+		TextoXML=TextoXML+"<Tecnología>"+"<Nombre>JSP</Nombre>";
+		TextoXML=TextoXML+"<Lenguaje>Java</Lenguaje>"+"</Tecnología>";
+		TextoXML=TextoXML+"</DesarrolloWeb>";
+		//----------------------------------------------
+		if (window.DOMParser)
+		{
+		  parser=new DOMParser();
+		  ObjetoXML=parser.parseFromString(TextoXML,"text/xml");
+		} else {
+		  ObjetoXML=new ActiveXObject("Microsoft.XMLDOM");
+		  ObjetoXML.async=false;
+		  ObjetoXML.loadXML(TextoXML);
+		}
+		//----------------------------------------------
+		document.write('<table class="table table-striped"><tr><th>Tecnología</th><th>Lenguaje</th></tr>');
+		var EtiquetaXML=ObjetoXML.getElementsByTagName("Tecnología");
+		for (i=0;i<EtiquetaXML.length;i++)
+		{ 
+		  document.write("<tr><td>");
+		  document.write(EtiquetaXML[i].getElementsByTagName("Nombre")[0].childNodes[0].nodeValue + "</td><td>");
+		  document.write(EtiquetaXML[i].getElementsByTagName("Lenguaje")[0].childNodes[0].nodeValue + "</td></tr>");
+		}//Fin for
+		document.write("</table>");		
+	//-->
+	</script>	
+</div>	
+</body>
+</html>
+

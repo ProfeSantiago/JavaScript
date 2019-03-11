@@ -1,0 +1,28 @@
+
+node -v
+npm -v
+cd/
+Mkdir miReact
+cd miReact
+npx create-react-app primera_app
+cd primera_app
+npm start
+
+----------------------------
+npm run build
+npm test
+npm run eject
+
+----------------------------
+npm install -g babel
+npm init
+
+npm install react react-dom --save
+npm install webpack --save
+npm install webpack-dev-server --save
+
+npm install babel-loader 
+npm install babel-preset-latest 
+npm install babel-preset-react 
+
+npm install -D webpack-cli

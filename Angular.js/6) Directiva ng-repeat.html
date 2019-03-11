@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+	<h3>Lista de Frameworks del curso</h3>
+	<div ng-app="" ng-init="frameworks=['JQuery' ,'React','Bootstrap','Angular.js']">
+		<ul>
+			<li ng-repeat="f in frameworks">
+			{{ f }}
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

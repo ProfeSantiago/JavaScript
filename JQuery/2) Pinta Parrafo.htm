@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pruebas JQuery</title>
+	
+	<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+	
+    <script>
+
+		$(document).ready(function(){
+
+			$("#Paint_Btn").click(function(){
+				$(".Clase_Amarilla").css("background-color","yellow");
+			});
+
+		});
+
+		function Pintar()
+		{
+			$(".Clase_Verde").css("background-color","green");
+		}
+
+    </script>
+	
+</head>
+<body>
+
+<p class="Clase_Amarilla">
+	Este párrafo se pintará de amarillo cuando se presione el botón,<br> 
+	porque tiene una clase llamada: "Clase_Amarilla"
+</p>
+
+<button id="Paint_Btn">Pintar Amarillo</button>
+<br><br>
+
+<p class="Clase_Verde">
+	Este párrafo se pintará de verde cuando se presione el botón,<br> 
+	porque tiene una clase llamada: "Clase_Amarilla"
+</p>
+
+<button onclick="Pintar()">Pintar Verde</button>
+<br><br>
+
+<p>
+	Nota: Observe que JQuery esta vez hace uso y controla reglas CSS
+</p>
+	
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<script type="text/javascript">
+		
+	function DibujaLinea(iniX, iniY, finX, finY)
+	{
+		//Creamos una instancia del Canvas
+		var miCamvas = document.getElementById("elCanvas");
+
+		//Obtenemos los métodos y propiedeades del canvas
+		var ctx = miCamvas.getContext("2d");
+		
+		ctx.moveTo(iniX,iniY); //Posición inicial X,Y
+		ctx.lineTo(finX,finY); //Posición final X,Y
+		ctx.lineTo(finX-90,finY-90);
+		ctx.strokeStyle="blue"; //Define color de línea
+		ctx.stroke(); //Dibuja
+	}
+
+
+</script>
+<body onload="DibujaLinea(100, 300, 190, 190)">
+
+	<canvas id="elCanvas" width="400" height="400" style="border:1px solid #d3d3d3;"></canvas>
+
+</body>
+</html>
