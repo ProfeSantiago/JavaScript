@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <div id="DivConJSX"></div>
+    <div id="DivSinJSX"></div>
+
+    <script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+        const ConJSX = <h2>Me hicieron con JSX</h2>;
+
+        const SinJSX = React.createElement('h2',{},'...Y a mi sin JSX');
+
+        ReactDOM.render(ConJSX, document.getElementById("DivConJSX"));
+        ReactDOM.render(SinJSX, document.getElementById("DivSinJSX"));
+    </script>
+</body>
+</html>
