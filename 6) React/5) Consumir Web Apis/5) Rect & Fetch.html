@@ -17,23 +17,22 @@
             }
 
             componentDidMount() {
-                this.Carga_Fetch()
-            }
-
-            Carga_Fetch = () => {
                 fetch('https://randomuser.me/api/')
-                .then(response => response.json())
-                .then(result => this.setState({person: result}))
-                .catch(e => console.log(e));
+                    .then((response) => {
+                        return response.json()
+                    })
+                    .then((JsonPersona) => {
+                        this.setState({ person: JsonPersona.results })
+                });
             }
 
             render() {
                 const datosPersona = this.state.person.map((item, i) => (
-                <div>
-                   <h2>Web Api de Usuarios</h2>
-                   <h3>Nombre: { item.name.first } Apellido: { item.name.last } </h3>
-                   <span>Telefono: { item.cell }, email: { item.email }</span>
-                </div>
+                    <div>
+                    <h3>Nombre: { item.name.first }, Apellido: { item.name.last } </h3>
+                    <h5>Telefono: { item.cell }, email: { item.email },</h5>
+                    <span>Ciudad: { item.location.city }</span>
+                    </div>
                 ));
 
                 return (
