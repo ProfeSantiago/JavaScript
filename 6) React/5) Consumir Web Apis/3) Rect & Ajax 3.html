@@ -16,10 +16,14 @@
                 this.state = {conexion: []};
             }
 
-            componentDidMount() {
-                $.getJSON('http://ip-api.com/json',
-                function (JsonConexion) {
-                    this.state.conexion: JsonConexion;
+            componentDidMount () {
+                $.ajax({
+                    method: 'GET',
+                    url: 'http://ip-api.com/json',
+
+                    success: (data) => {
+                        this.setState({ conexion:data })
+                    }
                 });
             }
 
