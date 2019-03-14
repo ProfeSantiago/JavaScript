@@ -1,6 +1,6 @@
 
 
-Practica de Angular + Ajax de JQuery:
+Practica React, Ajax, Fetch:
 
 https://jsonip.com
 http://ip-api.com/json
