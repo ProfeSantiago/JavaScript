@@ -4,10 +4,8 @@ Practica React, Ajax, Fetch:
 
 https://jsonip.com
 http://ip-api.com/json
-
 https://randomuser.me/api/
-
-
 https://hn.algolia.com/api/v1/search?query=
+
 
 https://restcountries.eu/rest/v2/all
