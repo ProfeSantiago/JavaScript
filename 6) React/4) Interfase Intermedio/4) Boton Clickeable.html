@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+<script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="DivBoton"></div>
+    
+    <script type="text/babel">
+
+        class BotonControlado extends React.Component {
+            constructor() {
+                super();
+                this.state = { TextoDelBoton: "Presioname" };
+                this.handleClick = this.handleClick.bind(this);
+            }
+            handleClick() {
+                this.setState(() => {
+                return { TextoDelBoton: "Gracias!!" };
+                });
+            }
+            render() {
+                const { TextoDelBoton } = this.state;
+                return <button onClick={this.handleClick}>{TextoDelBoton}</button>;
+            }
+        }
+
+        ReactDOM.render(<BotonControlado />, document.getElementById("DivBoton"));
+    </script>
+</body>
+</html>
