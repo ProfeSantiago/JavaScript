@@ -1,11 +1,11 @@
-### Curso Básico de JavaScript y algunos Frameworks:
+### Curso Básico de JavaScript y algunas otras tecnologías:
 
 | Librerías & Frameworks: | Mobile:                 | Server Side:            |
 | ----------------------- | ----------------------- | ----------------------- |
 | JQuery                  | Apache Cordova          | Node.js                 |
 | Bootstrap               | ionic                   | Express                 |
-| Vue.js                  | React Native            |                         |
-| React                   |                         |                         |
+| React                   | React Native            |                         |
+| Vue.js                  |                         |                         |
 | Redux                   |                         |                         |
 | Angular                 |                         |                         |
 
