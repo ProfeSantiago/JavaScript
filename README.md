@@ -1,5 +1,7 @@
 ### Curso Básico de JavaScript y algunos Frameworks:
 
+Nota: Antes de empezar se recomienda revisar el curso de [HTML5 & CSS3](https://github.com/ProfeSantiago/HTML5-CSS3)
+
 ### Librerías:
 * JQuery
 * Redux
