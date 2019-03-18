@@ -1,29 +1,21 @@
-### Curso Básico de JavaScript y algunos Frameworks:
+### Curso Básico de JavaScript y algunas otras tecnologías:
 
-### Librerías:
-* JQuery
-* Redux
+| Librerías & Frameworks: | Mobile:                 | Server Side:            |
+| ----------------------- | ----------------------- | ----------------------- |
+| JQuery                  | Apache Cordova          | Node.js                 |
+| Bootstrap               | ionic                   | Express                 |
+| React                   | React Native            |                         |
+| Vue.js                  |                         |                         |
+| Redux                   |                         |                         |
+| Angular                 |                         |                         |
 
-### UI:
-* Bootstrap
-* React
-* Vue.js
 
-### Mobile:
-* Apache Cordova
-* ionic
-* React Native
-
-### Single Page Applications:
-* Angular
-
-### Server Side:
-* Node.js
-* Express
-
-### Tools:
+### Herramientas de desarrollo:
 * Grunt
 * Gulp
 * NPM
 * Bower
 * WebPack
+
+
+:point_right: Nota: Antes de empezar se recomienda revisar el curso de [HTML5 & CSS3](https://github.com/ProfeSantiago/HTML5-CSS3)
