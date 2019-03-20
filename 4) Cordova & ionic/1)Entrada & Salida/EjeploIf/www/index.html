@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+		<title>Blank App Designer Cordova Web App Project Template</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+
+		<style>
+			@-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          
+			        @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+			        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   
+			        @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+			        @-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   
+			        @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }
+		</style>
+
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+		<script src="cordova.js" id="xdkJScordova_"></script>
+		<script src="js/app.js"></script>
+		<script src="js/init-app.js"></script>
+		<script src="xdk/init-dev.js"></script>
+		<script type="application/javascript" src="lib/jquery.min.js"></script>
+		<script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+
+		<script language="javascript">
+			<!--
+				function comprobar()
+				{
+					if (document.form1.checkbox3.checked == true)
+					{
+						if (document.form1.checkbox1.checked == true & document.form1.checkbox2.checked == false ){	
+							alert('falta el requisito #2');
+                            document.form1.checkbox3.checked = false;
+						}
+						
+						if (document.form1.checkbox2.checked == true & document.form1.checkbox1.checked == false ){	
+							alert('falta el requisito #1');
+                            document.form1.checkbox3.checked = false;
+						}
+							
+						if (document.form1.checkbox1.checked == true & document.form1.checkbox2.checked == true){
+							alert('si puede matricular el curso!');
+						}else{
+							alert('no puede matricularlo!');
+                            document.form1.checkbox3.checked = false;
+						}
+					}	
+				}
+            
+                function salir(){
+                    navigator.app.exitapp();       
+                }
+
+			
+			//-->
+		</script>
+
+	</head>
+
+	<body>
+		<div class="upage vertical-col left" id="mainpage" data-role="page">
+			<div class="tarea widget uib_w_1 d-margins" data-uib="media/text" data-ver="0" name="uib_w_1">
+				<div class="widget-container left-receptacle"></div>
+				<div class="widget-container right-receptacle"></div>
+				<div class="text-container">
+					<h3>Mini App de Matrícula</h3>
+				</div>
+			</div>
+			<form action="" method="post" id="form1" name="form1">
+				<div class="ui-checkbox widget uib_w_2 d-margins" data-uib="jquery_mobile/checkbox" data-ver="0">
+					<label>Requisito #1
+						<input type="checkbox" id="checkbox1">
+					</label>
+				</div>
+				<div class="ui-checkbox widget uib_w_3 d-margins" data-uib="jquery_mobile/checkbox" data-ver="0">
+					<label>Requisito #2
+						<input type="checkbox" id="checkbox2">
+					</label>
+				</div>
+				<div class="tarea widget uib_w_4 d-margins" data-uib="media/text" data-ver="0" name="uib_w_4">
+					<div class="widget-container left-receptacle"></div>
+					<div class="widget-container right-receptacle"></div>
+
+				</div>
+
+				<div class="ui-checkbox widget uib_w_5 d-margins" data-uib="jquery_mobile/checkbox" data-ver="0">
+					<label>Curso a Matricular
+						<input type="checkbox" id="checkbox3" onclick="comprobar()">
+					</label>
+				</div>
+			</form>
+			<a class="widget uib_w_6 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="power" id="Salir_Btn" onclick="salir()">Salir</a>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <style>
+            @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          
+                @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   
+                @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                @-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   
+                @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+        <script src="cordova.js" id="xdkJScordova_"></script>
+        <script src="js/app.js"></script>
+        <script src="js/init-app.js"></script>
+        <script src="xdk/init-dev.js"></script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+
+        <script language="javascript" runat="client">
+            <!--
+            function Evalua() {
+                var laEdad = document.getElementById('edadTxt').value;
+    
+                switch(laEdad) {
+                    case "15":
+                      alert("Es menor de edad\nNo puede ingresar");
+                      break;
+                    case "18":
+                      alert("Es mayor de edad\nSi puede ingresar");
+                      break;
+                    case "40":
+                      alert("Es un poco mayorsito para esto!!");
+                      break;
+                    default:
+                      alert("Para probar este ejemplo digite 15, 18 o 40");
+                      break;
+                }	
+            }
+            
+            function salir(){
+                navigator.app.exitapp();       
+            }
+
+            //-->
+        </script>
+        <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+    </head>
+
+    <body>
+        <div class="upage vertical-col left" id="mainpage" data-role="page">
+            <div class="tarea widget uib_w_1 d-margins" data-uib="media/text" data-ver="0" name="uib_w_1">
+                <div class="widget-container left-receptacle"></div>
+                <div class="widget-container right-receptacle"></div>
+                <div class="text-container">
+                    <h3>Inscripción a MyHiFace.com</h3>
+                </div>
+            </div>
+            <div class="table-thing with-label widget uib_w_2 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+                <label class="narrow-control label-inline" for="edadTxt">Digite su edad (números solamente)</label>
+
+                <input class="wide-control" type="text" placeholder="Su Edad" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" id="edadTxt">
+
+            </div>
+
+            <div class="uib-grid widget uib_w_5 grid-text grid-height d-margins" data-uib="layout/grid" data-ver="1">
+                <div class="uib-grid-row">
+                    <div class="uib-grid-cell widget-container"><a class="widget uib_w_4 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="power" data-iconpos="left"  onclick="salir()">Salir</a>
+                    </div>
+                    <div class="uib-grid-cell widget-container"><a class="widget uib_w_3 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" onclick="Evalua()">Ingresar &gt;&gt;</a>
+                    </div>
+                </div>
+                <div class="uib-grid-row">
+                    <div class="uib-grid-cell widget-container"></div>
+                    <div class="uib-grid-cell widget-container"></div>
+                </div>
+                <div class="uib-grid-row">
+                    <div class="uib-grid-cell widget-container"></div>
+                    <div class="uib-grid-cell widget-container"></div>
+                </div>
+                <div class="uib-grid-row">
+                    <div class="uib-grid-cell widget-container"></div>
+                    <div class="uib-grid-cell widget-container"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

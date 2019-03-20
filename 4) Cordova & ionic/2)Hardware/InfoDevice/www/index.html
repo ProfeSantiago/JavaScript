@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blank App Designer Cordova Web App Project Template</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    
+    <style>
+        @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          
+        @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   
+        @viewport { user-zoom: fixed ; min-zoom: 100% ; }        
+    </style>
+
+    <link rel="stylesheet" href="css/app.css">
+    <script src="cordova.js" id="xdkJScordova_"></script>
+    <script src="js/app.js"></script>           
+    <script src="js/init-app.js"></script>      
+    <script src="xdk/init-dev.js"></script>  
+    
+     <script type="text/javascript" charset="utf-8"> 
+         
+        document.addEventListener("deviceready", onDeviceReady, false);
+         
+        function onDeviceReady() {
+            //muestraDatos(device.cordova);
+               
+            var elDiv = document.getElementById("elDiv");
+            var elTexto = "<h2>Datos del Device: </h2>";
+            
+            elTexto += "Modelo del teléfono: " + device.model + "<br>";
+            elTexto += "S.O.: " + device.platform + "<br>";
+            elTexto += "Versión S.O.: " + device.version + "<br>";
+            elTexto += "Fabricante: " + device.manufacturer + "<br>";
+            elTexto += "Versión Cordova: " + device.cordova + "<br>";
+            elTexto += "<br>Es un emulador?: " + device.isVirtual + "<br>";
+            elTexto += "<br>Serial del teléfono: " + device.serial + "<br>";
+            elTexto += "<br>Identificador único universal: <br> " + device.uuid + "<br>";
+            
+            elDiv.innerHTML = elTexto;                
+        }//------------------------------------------
+
+        function Salir(){
+            navigator.app.exitApp();       
+        }//Fin Salir ===================================== 
+    </script>
+</head>
+<body>
+    <div id="elDiv"></div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+        <meta charset="UTF-8">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+
+        <style>
+            @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+            @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+        <script src="cordova.js" id="xdkJScordova_"></script>
+        <script src="js/app.js"></script>
+        <script src="js/init-app.js"></script>
+        <script src="xdk/init-dev.js"></script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+
+        <script language="javascript" runat="client">
+            var numPantalla=0;
+            var resultado=0;
+                         
+            function LimpiaPantalla(){
+                document.getElementById('Pantalla_Txt').value = "";
+            }
+                        
+            function Coseno(){
+                NumPantalla = document.getElementById('Pantalla_Txt').value;
+                resultado = Math.cos(NumPantalla);
+                document.getElementById('Pantalla_Txt').value = resultado;
+            }                      
+            
+            function Raiz(){
+                NumPantalla = document.getElementById('Pantalla_Txt').value;
+                resultado = Math.sqrt(NumPantalla);
+                document.getElementById('Pantalla_Txt').value = resultado;
+            }
+            
+            function Seno(){
+                NumPantalla = document.getElementById('Pantalla_Txt').value;
+                resultado = Math.sin(NumPantalla);
+                document.getElementById('Pantalla_Txt').value = resultado;
+            }
+            
+            function Tangente(){
+                NumPantalla = document.getElementById('Pantalla_Txt').value;
+                resultado = Math.tan(NumPantalla);
+                document.getElementById('Pantalla_Txt').value = resultado;
+            }
+			
+            function Redondeo(){
+                NumPantalla = document.getElementById('Pantalla_Txt').value;
+                resultado = Math.round(NumPantalla);
+                document.getElementById('Pantalla_Txt').value = resultado;
+            }
+            
+			function Salir(){
+                navigator.app.exitApp();       
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="upage vertical-col" id="mainpage" data-role="page">
+            <div class="table-thing with-label widget uib_w_1 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+                <label class="narrow-control" for="Pantalla_Txt"></label>
+                <input class="wide-control" placeholder="0.00" type="text" id="Pantalla_Txt">
+            </div>
+            <div class="uib-grid widget uib_w_2 grid-text grid-height d-margins" data-uib="layout/grid" data-ver="1" id="TablaBotones">
+                <div class="uib-grid-row">
+                    <div class="uib-grid-cell widget-container">
+
+                        <a class="widget uib_w_7 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="Ac_Btn" onclick="LimpiaPantalla()" data-theme="b">AC</a>
+                    </div>
+                    <div class="uib-grid-cell widget-container">
+
+                        <a class="widget uib_w_9 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" id="Round_Btn" onclick="Redondeo()">Round</a>
+                    </div>
+                    <div class="uib-grid-cell widget-container">
+                        <a class="widget uib_w_10 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" data-icon="heart" data-iconpos="notext">Sin Funcion</a>
+
+                    </div>
+                    <div class="uib-grid-cell widget-container"><a class="widget uib_w_6 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="Sale_Btn" onclick="Salir()" data-theme="b" data-icon="power" data-iconpos="notext">Salir</a>
+                    </div>
+                </div>
+                <div class="uib-grid-row">
+                    <div class="uib-grid-cell widget-container">
+
+                        <a class="widget uib_w_3 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="Cos_Btn" onclick="Coseno()" data-theme="b">Cos</a>
+                    </div>
+                    <div class="uib-grid-cell widget-container">
+
+                        <a class="widget uib_w_4 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="Tan_Btn" onclick="Tangente()" data-theme="b">Tan</a>
+                    </div>
+                    <div class="uib-grid-cell widget-container">
+
+                        <a class="widget uib_w_5 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="Sen_Btn" onclick="Seno()" data-theme="b">Sen</a>
+                    </div>
+                    <div class="uib-grid-cell widget-container"><a class="widget uib_w_8 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" onclick="Raiz()">Raiz</a>
+                    </div>
+                </div>
+
+                <div class="uib-grid-row">
+                    <div class="uib-grid-cell widget-container">
+                    </div>
+                    <div class="uib-grid-cell widget-container"></div>
+                    <div class="uib-grid-cell widget-container"></div>
+                    <div class="uib-grid-cell widget-container"></div>
+                </div>
+                <div class="uib-grid-row">
+                    <div class="uib-grid-cell widget-container"></div>
+                    <div class="uib-grid-cell widget-container"></div>
+                    <div class="uib-grid-cell widget-container"></div>
+                    <div class="uib-grid-cell widget-container"></div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+
+</html>

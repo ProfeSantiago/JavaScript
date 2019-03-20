@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+        <meta charset="UTF-8">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+
+        <style>
+            @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+            @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+        <script src="cordova.js" id="xdkJScordova_"></script>
+        <script src="js/app.js"></script>
+        <script src="js/init-app.js"></script>
+        <script src="xdk/init-dev.js"></script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+
+        <script language="javascript" runat="client">
+            function onLoad()
+            {
+                  document.addEventListener("deviceready", onDeviceReady, true);
+            }
+            
+            function Saluda(){
+                var nombre = document.getElementById('nombreTxt').value;
+                alert("Hola: " + nombre + "\nComo estas?");
+            }
+            
+            function Sale(){
+                navigator.app.exitApp();       
+            }
+        </script>
+    </head>
+
+    <body onload="onLoad();">
+
+        <div class="upage vertical-col left ui-page-theme-a" id="mainpage" data-role="page">
+
+            <div class="table-thing with-label widget uib_w_1 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+                <label class="narrow-control" for="nombreTxt"></label>
+                <input class="wide-control" placeholder="Digite su nombre" type="text" id="nombreTxt">
+            </div><a class="widget uib_w_2 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" onclick="Saluda()">Saludar</a>
+            <a class="widget uib_w_3 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" onclick="Sale()">Salir</a>
+            <div class="tarea widget uib_w_4 d-margins" data-uib="media/text" data-ver="0" name="uib_w_4">
+                <div class="widget-container left-receptacle"></div>
+                <div class="widget-container right-receptacle"></div>
+                
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+
+        <style>
+            @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          
+            @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+            @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   
+            @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+        <script src="cordova.js" id="xdkJScordova_"></script>
+        <script src="js/app.js"></script>
+        <script src="js/init-app.js"></script>
+        <script src="xdk/init-dev.js"></script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+        
+        <script type="text/javascript" charset="utf-8">    
+            
+            document.addEventListener("deviceready", onDeviceReady, false);
+            function onDeviceReady() {console.log(navigator.notification)};
+
+            function sonido() {              
+                navigator.notification.beep(1); //Suena 1 vez.   
+            }//Fin sonido =====================================
+
+
+            function vibrar() {                
+                navigator.notification.vibrate(500); //Vibra x medio segundo.                 
+            }//Fin vibrar ===================================== 
+
+            function Salir(){
+                navigator.app.exitApp();       
+            }//Fin Salir ===================================== 
+        </script>
+    </head>
+
+    <body>
+        <div class="upage vertical-col left" id="mainpage" data-role="page">
+            
+            
+            <a class="widget uib_w_1 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" data-icon="recycle" id="Vibra_Btn" onclick="vibrar()">Vibrar</a>
+            
+            <a class="widget uib_w_2 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button"
+            data-theme="b" data-icon="audio" id="Sonido_Btn" onclick="sonido()">Sonido</a>
+            
+            <a class="widget uib_w_3 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" data-icon="power" id="Salir_Btn" onclick="Salir()">Salir</a>
+        </div>
+        
+        
+    </body>
+
+</html>
