@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+<script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="DivBoton"></div>
+    
+    <script type="text/babel">
+
+        class BotonClick extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {elEstado: 'Apagado'}
+                this.actualizaEstado = this.actualizaEstado.bind(this);
+            };
+
+            actualizaEstado() {
+                this.setState({elEstado: 'Encendido'})
+            }
+
+            render() {
+                return (
+                    <div>
+                        <button onClick = {this.actualizaEstado}>Encender</button>
+                        <h4>{this.state.elEstado}</h4>
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(<BotonClick />,
+        document.getElementById('DivBoton'));
+    </script>
+</body>
+</html>
