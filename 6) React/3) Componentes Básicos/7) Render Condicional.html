@@ -19,13 +19,13 @@
 
         function RenderCondicional(props) {
             const cualOpcion = props.cual;
-            if (cualOpcion) {
+            if (cualOpcion==1) {
                 return <RenderOpcion1 />;
             }
             return <RenderOpcion2 />;
         }
 
-        ReactDOM.render(<RenderCondicional cual={false} />,
+        ReactDOM.render(<RenderCondicional cual={2} />,
         document.getElementById('DivClase'));
 
     </script>

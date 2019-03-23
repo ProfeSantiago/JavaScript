@@ -23,12 +23,12 @@
             }
 
             render() {
-                const datosPersona = this.state.Inventario.map((item, i) => (
+                const listaInventatio = this.state.Inventario.map((item, i) => (
                     <li>Codigo: { item.id } | Producto: { item.name } | Color: { item.color }  | Precio:$ { item.price } </li>
                 ));
 
                 return (
-                    <ul>{ datosPersona }</ul>
+                    <ul>{ listaInventatio }</ul>
                 );
             }
 
