@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <div id="elDiv"></div>
+
+    <script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    
+    <script type="text/babel">
+        
+        const formJSX =  
+                    <form action="http://codepen.io/pen/define" method="POST" target="_blank">
+                        <button type="submit" className="btn btn-default">Ir a CodePen</button>
+                    </form>;
+
+        ReactDOM.render(formJSX,
+        document.getElementById('elDiv'));
+    </script>
+</body>
+</html>
