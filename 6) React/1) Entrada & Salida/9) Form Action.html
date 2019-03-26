@@ -10,13 +10,12 @@
     
     <script type="text/babel">
         
-        const frameworks = ['Angular', 'React', 'Vue', 'Knockout'];
-        
-        const ListaItems = frameworks.map((unframework) =>
-            <li>{unframework}</li>
-        );
+        const formJSX =  
+                    <form action="http://codepen.io/pen/define" method="POST" target="_blank">
+                        <button type="submit" className="btn btn-default">Ir a CodePen</button>
+                    </form>;
 
-        ReactDOM.render(<ul>{ListaItems}</ul>,
+        ReactDOM.render(formJSX,
         document.getElementById('elDiv'));
     </script>
 </body>

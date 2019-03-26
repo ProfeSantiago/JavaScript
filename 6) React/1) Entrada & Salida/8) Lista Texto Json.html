@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <div id="elDiv"></div>
+
+    <script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    
+    <script type="text/babel">
+        
+        const frasesJson = [
+            {text: 'Whatever the mind of man can conceive and believe, it can achieve.',
+            author: 'Napoleon Hill'},
+            {text: 'Strive not to be a success, but rather to be of value.',
+            author: 'Albert Einstein'},
+            {text: 'I attribute my success to this: I never gave or took any excuse.',
+            author: 'Florence Nightingale'},
+            {text: 'You miss 100% of the shots you don’t take.',
+            author: 'Wayne Gretzky'}
+        ];
+
+        const arregloFrases = frasesJson.map((unaFrase) =>
+            <li>Frase = {unaFrase.text} Autor={unaFrase.author}</li>
+        );
+
+        ReactDOM.render(<ul>{arregloFrases}</ul>,
+        document.getElementById('elDiv'));
+    </script>
+</body>
+</html>
