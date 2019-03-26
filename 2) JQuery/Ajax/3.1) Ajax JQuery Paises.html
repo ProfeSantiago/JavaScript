@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+<!--					
+	function Ajax_JQuery() {
+		try {
+			$.ajax({
+				url: 'https://restcountries.eu/rest/v2/all'
+			})
+			.done(function (data) {
+				ImprTablaJson(data);
+			});
+		} catch (err) {
+			alert(err);
+		}// fin catch
+	}//fin Ajax_Completo ==============================
+		
+	function ImprTablaJson(ObjetoJSON) {
+		document.write("<h2>Web Service que devuelve información de países</h2>");
+		document.write("<h3>Llamado con JQuery</h3>");
+		document.write("<table border=1><tr> <th>Bandera</th> <th>País</th> <th>Capital</th> </tr>");
+		for (i=0; i < ObjetoJSON.length; i++)
+		{
+			document.write("<tr>");
+
+		    document.write("<td>");
+			document.write('<img  alt="Bandera" height="40" width="60" src=" ' + ObjetoJSON[i].flag + ' ">');
+			document.write("</td>");
+			
+			document.write("<td>");
+			document.write(ObjetoJSON[i].name);
+			document.write("</td>");
+			
+			document.write("<td>");
+			document.write(ObjetoJSON[i].capital);
+			document.write("</td>");
+			
+			document.write("</tr>");
+		}
+		
+		document.write("</table>");
+	}//Fin ImprTablaJson ================================================
+			
+	Ajax_JQuery();
+</script>	
+</body>
+</html>
+
