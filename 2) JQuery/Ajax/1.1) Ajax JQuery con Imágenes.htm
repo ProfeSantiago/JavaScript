@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+			
+	function Ajax_JQuery() {
+		try {
+			$.ajax({
+				url: 'https://api.spacexdata.com/v3/launches/latest'
+			})
+			.done(function (data) {
+				ImprTablaJson(data);
+			});
+		} catch (err) {
+			alert(err);
+		}// fin catch
+	}//fin Ajax_Completo ==============================
+			
+	function ImprTablaJson(ObjetoJSON) {
+		document.write("<h2>Ejemplo del Web Service de SpaceX</h2>");
+		document.write("<table border=1><tr><th>Nombre Mision</th> <th>Foto</th></tr>");
+
+		document.write("<tr><td>");
+		document.write(ObjetoJSON.mission_name);
+		document.write("</td>");
+		
+		document.write("<td>");
+		document.write('<img  alt="Bandera" height="100" width="120" src=" ' + ObjetoJSON.links.flickr_images[1] + ' ">');
+		document.write("</td></tr>");
+
+		document.write("</table>");
+	}//Fin ImprTablaJson ================================================
+					
+	Ajax_JQuery();
+
+</script>	
+</body>
+</html>
+

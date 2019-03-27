@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <script type="text/javascript">
@@ -9,7 +9,7 @@
 	function Ajax_JQuery() {
 		try {
 			$.ajax({
-				url: 'https://restcountries.eu/rest/v1/all'
+				url: 'https://restcountries.eu/rest/v2/all'
 			})
 			.done(function (data) {
 				ImprTablaJson(data);
