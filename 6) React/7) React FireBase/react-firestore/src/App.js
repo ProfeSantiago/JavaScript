@@ -40,17 +40,17 @@ class App extends Component {
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-              BOARD LIST
+              Lista de Libros
             </h3>
           </div>
           <div class="panel-body">
-            <h4><Link to="/create">Add Board</Link></h4>
+            <h4><Link to="/create">Agregar Libro</Link></h4>
             <table class="table table-stripe">
               <thead>
                 <tr>
-                  <th>Title</th>
-                  <th>Description</th>
-                  <th>Author</th>
+                  <th>Titulo</th>
+                  <th>Descripcion</th>
+                  <th>Autor</th>
                 </tr>
               </thead>
               <tbody>

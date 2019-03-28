@@ -67,25 +67,25 @@ class Edit extends Component {
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-              EDIT BOARD
+              Editar Libro
             </h3>
           </div>
           <div class="panel-body">
             <h4><Link to={`/show/${this.state.key}`} class="btn btn-primary">Board List</Link></h4>
             <form onSubmit={this.onSubmit}>
               <div class="form-group">
-                <label for="title">Title:</label>
+                <label for="title">Titulo:</label>
                 <input type="text" class="form-control" name="title" value={this.state.title} onChange={this.onChange} placeholder="Title" />
               </div>
               <div class="form-group">
-                <label for="description">Description:</label>
+                <label for="description">Descripcion:</label>
                 <input type="text" class="form-control" name="description" value={this.state.description} onChange={this.onChange} placeholder="Description" />
               </div>
               <div class="form-group">
-                <label for="author">Author:</label>
+                <label for="author">Autor:</label>
                 <input type="text" class="form-control" name="author" value={this.state.author} onChange={this.onChange} placeholder="Author" />
               </div>
-              <button type="submit" class="btn btn-success">Submit</button>
+              <button type="submit" class="btn btn-success">Guardar</button>
             </form>
           </div>
         </div>
