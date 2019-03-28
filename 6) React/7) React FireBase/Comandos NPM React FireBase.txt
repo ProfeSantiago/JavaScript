@@ -1,0 +1,16 @@
+sudo npm install -g create-react-app
+create-react-app react-firestore
+npm install --save firebase
+
+touch src/Firebase.js
+
+npm install jquery
+npm install --save react-router-dom
+npm install --save-dev bootstrap
+
+mkdir src/components
+touch src/components/Create.js
+touch src/components/Show.js
+touch src/components/Edit.js
+
+npm start

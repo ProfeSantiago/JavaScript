@@ -7,8 +7,6 @@ cd miReact
 npx create-react-app primera_app
 cd primera_app
 npm start
-
-----------------------------
 npm run build
 npm test
 npm run eject
