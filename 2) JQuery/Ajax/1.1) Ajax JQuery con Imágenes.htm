@@ -19,16 +19,16 @@
 		}// fin catch
 	}//fin Ajax_Completo ==============================
 			
-	function ImprTablaJson(ObjetoJSON) {
+	function ImprTablaJson(data) {
 		document.write("<h2>Ejemplo del Web Service de SpaceX</h2>");
 		document.write("<table border=1><tr><th>Nombre Mision</th> <th>Foto</th></tr>");
 
 		document.write("<tr><td>");
-		document.write(ObjetoJSON.mission_name);
+		document.write(data.mission_name);
 		document.write("</td>");
 		
 		document.write("<td>");
-		document.write('<img  alt="Bandera" height="100" width="120" src=" ' + ObjetoJSON.links.flickr_images[1] + ' ">');
+		document.write('<img  alt="Cohete" height="100" width="120" src=" ' + data.links.flickr_images[3] + ' ">');
 		document.write("</td></tr>");
 
 		document.write("</table>");
