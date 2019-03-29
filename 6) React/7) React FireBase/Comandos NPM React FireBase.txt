@@ -8,7 +8,7 @@ npm install --save react-router-dom
 npm install --save-dev bootstrap
 
 ------------------------------------------------
-Linux, Unix, Mac    ||  Windows
+Linux, Unix, Mac    ||    Windows
 ------------------------------------------------
 cd src              ||    cd src  
 touch Firebase.js   ||    echo.> Firebase.js
