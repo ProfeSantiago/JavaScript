@@ -10,21 +10,21 @@ npm install --save-dev bootstrap
 ------------------------------------------------
 Linux, Unix, Mac    ||  Windows
 ------------------------------------------------
-cd src
-touch Firebase.js   ||     echo.> Firebase.js
-
-mkdir components
-cd components
-
+cd src              ||    cd src  
+touch Firebase.js   ||    echo.> Firebase.js
+                    ||
+mkdir components    ||    mkdir components 
+cd components       ||    cd components 
+                    ||
 touch Create.js     ||     echo.> Create.js
 touch Show.js       ||     echo.> Show.js
 touch Edit.js       ||     echo.> Edit.js
-
+                    ||
 cd ..               ||     cd..
 cd ..               ||     cd..
 ------------------------------------------------
 Reemplase sus archivos con los de la carpeta 
-compartida
+compartida y ejecute lo siguiente hasta el final 
 ------------------------------------------------
 
-npm start ----> Ojo este todavia NO!, mejor hasta el puro final
+npm start
