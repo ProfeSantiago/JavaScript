@@ -7,6 +7,9 @@ npm install jquery
 npm install --save react-router-dom
 npm install --save-dev bootstrap
 
+------------------------------------------------
+Linux, Unix, Mac    ||  Windows
+------------------------------------------------
 cd src
 touch Firebase.js   ||     echo.> Firebase.js
 
@@ -16,5 +19,12 @@ cd components
 touch Create.js     ||     echo.> Create.js
 touch Show.js       ||     echo.> Show.js
 touch Edit.js       ||     echo.> Edit.js
+
+cd ..               ||     cd..
+cd ..               ||     cd..
+------------------------------------------------
+Reemplase sus archivos con los de la carpeta 
+compartida
+------------------------------------------------
 
 npm start ----> Ojo este todavia NO!, mejor hasta el puro final
