@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+<script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="DivClase"></div>
+    
+    <script type="text/babel">
+
+        class FormularioReact extends React.Component {
+
+            constructor(props) {
+                super(props);
+                this.cambiaMayus = this.cambiaMayus.bind(this);
+                this.state = { mayuscula: false };
+            }
+
+            cambiaMayus() {
+                const esMayus = this.state.mayuscula;
+                const value = this.inputField.value;
+                
+                this.inputField.value = esMayus
+                    ? value.toLowerCase()
+                    : value.toUpperCase();
+                    
+                this.setState({ mayuscula: !esMayus });
+            }
+
+            render() {
+            return (
+                <div>
+                <input type="text" ref={elem => this.inputField = elem} />
+                <button type="button" onClick={this.cambiaMayus}>
+                    Cambia Mayusculas
+                </button>
+                </div>
+            );
+            }
+
+        }
+
+        ReactDOM.render(<FormularioReact />, document.getElementById("DivClase"));
+
+    </script>
+</body>
+</html>

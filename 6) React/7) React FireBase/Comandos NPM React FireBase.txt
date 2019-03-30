@@ -1,12 +1,28 @@
 
 
+
 npm install -g create-react-app
 create-react-app react-firestore
-npm install --save firebase
-npm install jquery
-npm install --save react-router-dom
-npm install --save-dev bootstrap
+cd react-firestore
 
+npm install --save firebase
+npm install --save jquery
+npm install --save react-router-dom
+npm install --save bootstrap
+
+npm start
+
+------------------------------------------------
+Copiar los archivos mios
+Copiar las credenciales de Firebase
+------------------------------------------------
+
+
+...
+
+
+------------------------------------------------
+Por si quisieran crear los archivos a mano:
 ------------------------------------------------
 Linux, Unix, Mac    ||    Windows
 ------------------------------------------------
