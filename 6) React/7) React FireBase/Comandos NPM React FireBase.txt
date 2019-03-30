@@ -14,7 +14,8 @@ npm start
 
 ------------------------------------------------
 Copiar los archivos mios
-Copiar las credenciales de Firebase
+Copiar las credenciales de Firebase y
+Refrescar el navegador
 ------------------------------------------------
 
 
