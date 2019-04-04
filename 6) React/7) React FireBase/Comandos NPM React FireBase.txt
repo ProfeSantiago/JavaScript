@@ -1,6 +1,15 @@
 
+
+
 npm install -g create-react-app
 create-react-app react-firestore
+
+--------------------------------------
+Nota: Los 2 comandos anteriores se 
+pueden cambiar por la siguiente línea:
+--------------------------------------
+
+npx create-react-app react-firestore
 
 cd react-firestore
 
@@ -10,48 +19,3 @@ npm install --save react-router-dom
 npm install --save bootstrap
 
 npm start
-
-
-
-
-
-
-
-
-------------------------------------------------
-Copiar los archivos mios
-Copiar las credenciales de Firebase y
-Refrescar el navegador
-------------------------------------------------
-
-
-...
-
-
-------------------------------------------------
-Por si quisieran crear los archivos a mano:
-------------------------------------------------
-Linux, Unix, Mac    ||    Windows
-------------------------------------------------
-cd src              ||    cd src  
-touch Firebase.js   ||    echo.> Firebase.js
-                    ||
-mkdir components    ||    mkdir components 
-cd components       ||    cd components 
-                    ||
-touch Create.js     ||     echo.> Create.js
-touch Show.js       ||     echo.> Show.js
-touch Edit.js       ||     echo.> Edit.js
-                    ||
-cd ..               ||     cd..
-cd ..               ||     cd..
-------------------------------------------------
-Reemplase sus archivos con los de la carpeta 
-compartida y ejecute lo siguiente hasta el final 
-------------------------------------------------
-
-npm start
-
-
-npm install
-yarn install
