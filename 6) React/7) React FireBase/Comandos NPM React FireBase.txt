@@ -1,8 +1,7 @@
 
-
-
 npm install -g create-react-app
 create-react-app react-firestore
+
 cd react-firestore
 
 npm install --save firebase
@@ -11,6 +10,13 @@ npm install --save react-router-dom
 npm install --save bootstrap
 
 npm start
+
+
+
+
+
+
+
 
 ------------------------------------------------
 Copiar los archivos mios
@@ -45,3 +51,7 @@ compartida y ejecute lo siguiente hasta el final
 ------------------------------------------------
 
 npm start
+
+
+npm install
+yarn install
