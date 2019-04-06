@@ -1,4 +1,8 @@
 
+Cmd
+CD\
+MKDIR PruebaFireBase
+CD PruebaFireBase
 
 
 npm install -g create-react-app
@@ -8,6 +12,7 @@ create-react-app react-firestore
 Nota: Los 2 comandos anteriores se 
 pueden cambiar por la siguiente línea:
 --------------------------------------
+
 
 npx create-react-app react-firestore
 
