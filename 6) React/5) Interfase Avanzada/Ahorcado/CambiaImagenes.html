@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+<script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="DivAhorcado"></div>
+    
+    <script type="text/babel">
+
+        function MuestraFoto(props) {
+            return (
+                <div>
+                    <img
+                        src={props.lafoto}
+                    />
+                </div>
+            );
+        }//------------------------------------------
+
+        class CambiaFoto extends React.Component {
+            constructor(props) {
+                super(props);
+                this.CambiaArchivo = this.CambiaArchivo.bind(this);
+                this.state = {
+                    listaFotos: [
+                        "./img/Ahorcado0.gif",
+                        "./img/Ahorcado1.gif",
+                        "./img/Ahorcado2.gif",
+                        "./img/Ahorcado3.gif",
+                        "./img/Ahorcado4.gif",
+                        "./img/Ahorcado5.gif",
+                        "./img/Ahorcado6.gif",
+                    ],
+                    Num_Foto : 0
+                };
+            }//------------------------------------------
+
+            DibujaAhorcado() {
+                return <MuestraFoto lafoto={this.state.listaFotos[this.state.Num_Foto]} />;
+            }//------------------------------------------
+
+            CambiaArchivo() {
+               //Poner aca su magia
+            }//------------------------------------------
+
+            render() {
+                return (
+                <div>
+                    <div>
+                        {this.DibujaAhorcado()}
+                    </div>
+
+                    <button onClick={this.CambiaArchivo}> Cambiar </button>
+                </div>
+                );
+            }
+        }//------------------------------------------
+
+        ReactDOM.render( <CambiaFoto/>,
+        document.getElementById('DivAhorcado'));
+
+    </script>
+</body>
+</html>
